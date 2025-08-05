@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Về chúng tôi</title>
+  <link rel="stylesheet" href="./CSS/main.css" />
+
+</head>
+<body>
+ <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo" ><img src="img/logo_official.jpg" width="50"></div>
+                <div class="brand-info">
+                    <h1>Cookmate</h1>
+                    <p>Chất lượng kim cương cho nhà bếp hiện đại</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a  href="products.html" target="_blank">Sản phẩm</a></li>
+                    <li><a href="about.html"target="_blank">Về chúng tôi</a></li>
+                    <li><a href="Blog.html" target="_blank">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="login-btn" onclick="openModal()">Đăng nhập</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Giỏ hàng
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                 <button class="policy-btn">Chính sách</button>
+            </div>
+        </div>
+    </header>
+
+    
+
+  <main class="about-section"><h1>VỀ CHÚNG TÔI (ABOUT US)</h1>
+    <div class="about-grid">
+  <div class="about-box">
+    <h2>Câu chuyện thương hiệu</h2>
+    <p>Chúng tôi tin rằng bếp không chỉ là nơi nấu ăn, mà còn là không gian để kết nối, sáng tạo và chăm sóc những người thân yêu. Thế nhưng, với nhịp sống hiện đại, không phải ai cũng có thời gian, kỹ năng hay sự tự tin để vào bếp mỗi ngày. Việc loay hoay nhớ công thức, phải vừa cầm điện thoại vừa đảo chảo, hay nấu sai liều lượng chỉ vì một lần lỡ tay... khiến nhiều người từ bỏ trải nghiệm nấu ăn đầy thú vị.
+</p>
+<p>Từ trăn trở đó, CookMate ra đời – một sản phẩm kết hợp giữa công nghệ thực tế tăng cường (AR) và trải nghiệm bếp truyền thống, giúp việc nấu ăn trở nên dễ dàng, trực quan và mang tính cá nhân hóa hơn bao giờ hết. Chỉ cần mặc tạp dề, mở ứng dụng, bạn sẽ được hướng dẫn từng bước – từ chuẩn bị nguyên liệu, thao tác đảo – lật, cho đến căn chỉnh thời gian hoàn hảo – tất cả hiển thị sinh động ngay trong không gian bếp của bạn.
+</p>
+<p>Với CookMate , ai cũng có thể là đầu bếp tại gia, kể cả những người từng nghĩ rằng mình không biết nấu ăn. Chúng tôi không chỉ tạo ra một thiết bị, mà đang mở ra một tương lai nơi công nghệ hỗ trợ con người chăm sóc bản thân và gia đình một cách thông minh, gần gũi và đầy cảm hứng.
+</p>
+  </div>
+
+  <div class="about-box">
+    <img src="img/photo-1729575846511-f499d2e17d79.jpg" alt="" />
+  </div>
+
+  <div class="about-box">
+    <img src="img/photo-1729575846511-f499d2e17d79.jpg" alt="" />
+  </div>
+
+  <div class="about-box">
+    <h2>Sứ mệnh</h2>
+    <p>Ứng dụng công nghệ thông minh vào không gian bếp, giúp việc nấu ăn trở nên đơn giản, thuận tiện và truyền cảm hứng mỗi ngày.
+    </p>
+    <br>
+    <h2>Tầm nhìn</h2>
+    <p>Trở thành biểu tượng tiên phong cho phong cách nấu ăn hiện đại – nơi công nghệ và trải nghiệm ẩm thực cá nhân được hòa quyện một cách tinh tế trong từng căn bếp.
+    </p>
+    </div>
+</div>
+    
+  <div class="about-box">
+    <img src="img/photo-1729575846511-f499d2e17d79.jpg" alt="" />
+  </div>  
+        
+  </main>
+
+  <!-- Footer -->
+    <footer class="fade-in">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Liên Hệ</h4>
+                <p>📧 info@cookmate.vn</p>
+                <p>📞 1900-COOKMATE</p>
+                <p>📍 XXX đường XXX, Phường XXX, TP.HCM</p>
+            </div>
+            <div class="footer-section">
+                <h4>Về Cookmate</h4>
+                <p>Cookmate cam kết mang đến những thiết bị nhà bếp chất lượng kim cương với công nghệ tiên tiến nhất, giúp mọi gia đình Việt có những bữa ăn ngon và ý nghĩa.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Đăng Ký Nhận Tin</h4>
+                <p>Nhận thông tin khuyến mãi và sản phẩm mới nhất</p>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" class="newsletter-input" placeholder="Email của bạn" required>
+                    <button type="submit" class="newsletter-btn">Đăng ký</button>
+                </form>
+            </div>
+            <div class="footer-section">
+            <a href="#"><img src="img/icons8-facebook.svg" alt="Facebook" width="50px"></a>
+            <a href="#"><img src="img/icons8-instagram.svg" alt="Instagram"width="50px"></a>
+            <a href="#"><img src="img/icons8-zalo.svg" alt="Zalo"width="50px"></a>
+        </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cookmate. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+</body>
+</html>

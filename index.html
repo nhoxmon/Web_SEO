@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookmate - Thiết Bị Điện Tử Nhà Bếp Cao Cấp</title>
+    <meta name="description" content="Cookmate - Thương hiệu thiết bị điện tử nhà bếp hàng đầu với chất lượng kim cương, công nghệ hiện đại">
+    <meta name="keywords" content="thiết bị nhà bếp, điện tử, Cookmate, nồi cơm điện, máy xay sinh tố">
+    <link rel="stylesheet" href="./CSS/main.css">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo" ><img src="img/logo_official.jpg" width="50"></div>
+                <div class="brand-info">
+                    <h1>Cookmate</h1>
+                    <p>Chất lượng kim cương cho nhà bếp hiện đại</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a  href="products.html" target="_blank">Sản phẩm</a></li>
+                    <li><a href="about.html"target="_blank">Về chúng tôi</a></li>
+                    <li><a href="Blog.html" target="_blank">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="login-btn" onclick="openModal()">Đăng nhập</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Giỏ hàng
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="policy-btn">Chính sách</button>
+            </div>
+            <div><a href="chinhSach.html"><button class="policy-btn">chính sách</button></a></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero fade-in" id="home">
+            <div class="hero-images">
+                <div class="product-image active" data-product="0"><img src="img/hinh_anh_sp_cookmate_ar.jpg" width="500px"></div>
+                <div class="product-image" data-product="1">🥘</div>
+                <div class="product-image" data-product="2">☕</div>
+                <div class="image-nav">
+                    <div class="nav-dot active" onclick="changeProduct(0)"></div>
+                    <div class="nav-dot" onclick="changeProduct(1)"></div>
+                    <div class="nav-dot" onclick="changeProduct(2)"></div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <p id="heroDescription">Khuyến mãi ...</p>
+                <h2 id="heroTitle">COOKMATE AR - MẶC LÀ THẤY. NẤU LÀ MÊ</h2>
+                <p id="heroDescription">CookMate AR là tạp dề thông minh tích hợp công nghệ thực tế tăng cường (AR), giúp bạn nấu ăn dễ dàng mà không cần cầm điện thoại hay ghi nhớ công thức. Chỉ cần mặc vào, hệ thống sẽ hiển thị công thức nổi ngay trong không gian bếp, điều khiển bằng giọng nói, gợi ý món ăn theo nguyên liệu có sẵn và hỗ trợ toàn bộ quá trình nấu ăn - từ chuẩn bị đến hoàn thiện.
+                </p>
+                <button class="cta-button" onclick="viewProducts()">Xem ngay</button>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section fade-in" id="products">
+            <h3>Sản Phẩm Nổi Bật</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                <img src="" alt="..." />
+                <h4>Coming soon</h4>
+                <p class="price">2.490.000 đ</p>
+                <div class="stars">★★★★★</div>
+                <button class="cta-button" onclick="viewProductsDetails()">Mua ngay</button>
+                </div>
+                <div class="product-card">
+                <img src="" alt="..." />
+                <h4>Coming soon</h4>
+                <p class="price">2.490.000 đ</p>
+                <div class="stars">★★★★★</div>
+                <button class="cta-button" onclick="viewProductsDetails()">Mua ngay</button>
+                </div>
+                <div class="product-card">
+                <img src="" alt="..." />
+                <h4>Coming soon</h4>
+                <p class="price">2.490.000 đ</p>
+                <div class="stars">★★★★★</div>
+                <button class="cta-button" onclick="viewProductsDetails()">Mua ngay</button>
+                </div>
+            </div>
+        </section>
+        
+
+    </main>
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="fade-in">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Liên Hệ</h4>
+                <p>📧 info@cookmate.vn</p>
+                <p>📞 1900-COOKMATE</p>
+                <p>📍 XXX đường XXX, Phường XXX, TP.HCM</p>
+            </div>
+            <div class="footer-section">
+                <h4>Về Cookmate</h4>
+                <p>Cookmate cam kết mang đến những thiết bị nhà bếp chất lượng kim cương với công nghệ tiên tiến nhất, giúp mọi gia đình Việt có những bữa ăn ngon và ý nghĩa.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Đăng Ký Nhận Tin</h4>
+                <p>Nhận thông tin khuyến mãi và sản phẩm mới nhất</p>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" class="newsletter-input" placeholder="Email của bạn" required>
+                    <button type="submit" class="newsletter-btn">Đăng ký</button>
+                </form>
+            </div>
+            <div class="footer-section">
+            <a href="#"><img src="img/icons8-facebook.svg" alt="Facebook" width="50px"></a>
+            <a href="#"><img src="img/icons8-instagram.svg" alt="Instagram"width="50px"></a>
+            <a href="#"><img src="img/icons8-zalo.svg" alt="Zalo"width="50px"></a>
+        </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cookmate. Tất cả quyền được bảo lưu.</p>
+        </div>
+        
+    </footer>
+
+
+
+
+
+
+
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <h3>Đăng Nhập</h3>
+            <input type="email" placeholder="Email" id="loginEmail">
+            <input type="password" placeholder="Mật khẩu" id="loginPassword">
+            <div class="modal-buttons">
+                <button class="modal-btn primary" onclick="login()">Đăng nhập</button>
+                <button class="modal-btn secondary" onclick="closeModal()">Hủy</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/products.js"></script>
+<script src="js/renderProducts.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/sliders.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/newsletter.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/scrollAnimation.js"></script>
+<script src="js/init.js"></script>
+<script src="js/main.js"></script>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96a70c25166ffdb2',t:'MTc1NDQwNDgwMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

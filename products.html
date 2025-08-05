@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Sản phẩm</title>
+  <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body>
+     <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo" ><img src="img/logo_official.jpg" width="50"></div>
+                <div class="brand-info">
+                    <h1>Cookmate</h1>
+                    <p>Chất lượng kim cương cho nhà bếp hiện đại</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a  href="products.html" target="_blank">Sản phẩm</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="login-btn" onclick="openModal()">Đăng nhập</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Giỏ hàng
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <a href="chinhSach.html"><button>chính sách</button></a>
+            </div>
+            
+        </div>
+    </header>
+
+
+  <section class="products">
+    <h2>Sản phẩm</h2>
+
+    <div class="controls">
+      <input type="text" id="search" placeholder="Tìm kiếm sản phẩm...">
+      <select id="filter">
+        <option value="all">Tất cả</option>
+        
+      </select>
+      <select id="sort">
+        <option value="default">Sắp xếp</option>
+        <option value="asc">Giá tăng dần</option>
+        <option value="desc">Giá giảm dần</option>
+      </select>
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+  </section>
+
+  <script src="JS/cart.js"></script>
+  <script type="module" src="JS/main.js"></script>
+</body>
+</html>
