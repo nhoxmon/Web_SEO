@@ -15,6 +15,25 @@
     height: 510px;
     width: 510px;
 }
+/* VIDEO */
+video{
+    width: 100%;
+    height: fit-content;
+}
+
+
+/* BANNER */
+.section-header {
+    background-color: #5c865c; /* màu xanh */
+    color: white; /* chữ trắng */
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    padding: 15px 0; /* khoảng cách trên dưới */
+    text-transform: uppercase; /* viết hoa */
+    letter-spacing: 1px; /* giãn chữ nhẹ */
+}
+
 
 .product-image {
     position: absolute;
