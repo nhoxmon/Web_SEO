@@ -135,8 +135,8 @@ video{
 
 
 .frames-box img {
-  aspect-ratio: 5/4;  
-  width: 100%;
+  aspect-ratio: 2/3;  
+  height: 600px;
   border-radius: 10px;
   object-fit: cover;
 }
