@@ -17,8 +17,10 @@
 }
 /* VIDEO */
 video{
-    width: 100%;
-    height: fit-content;
+    display: block;
+    width: 98vw;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
 
@@ -111,4 +113,40 @@ video{
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+
+
+.frames-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0; /* Không khoảng cách giữa các box */
+  padding: 0; /* Không khoảng cách ngoài */
+}
+
+.frames-box {
+  background: transparent;
+  padding: 1.5rem;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  margin: 0;
+}
+
+
+.frames-box img {
+  aspect-ratio: 5/4;  
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.frames-box h2 {
+  color: #ff6f00;
+  margin-bottom: 1rem;
+}
+
+.frames-box p {
+  line-height: 1.6;
+  font-size: 1.1rem;
 }
