@@ -81,3 +81,9 @@
   line-height: 1.6;
   font-size: 1.1rem;
 }
+
+.about-section h1 {
+  color: #ff6f00;
+  margin-bottom: 1rem;
+  padding: 20px;
+}

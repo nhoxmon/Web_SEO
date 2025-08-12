@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi Tiết Sản Phẩm</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      width: 100%;
+      width: 1200px;
+      display: flex;
+      gap: 40px;
+      background: white;
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .gallery {
+      width: 50%;
+    }
+
+    .main-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+    }
+
+    .thumbnails {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .thumbnails img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .thumbnails img.active {
+      border-color: black;
+    }
+
+    .details {
+      width: 50%;
+    }
+
+    .price {
+      font-size: 24px;
+      color: #e53935;
+      margin: 10px 0;
+    }
+
+    .options {
+      margin: 20px 0;
+    }
+
+    .options h4 {
+      margin-bottom: 5px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-group button {
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      background: white;
+      cursor: pointer;
+    }
+
+    .btn-group button.active {
+      border-color: black;
+      font-weight: bold;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .quantity button {
+      padding: 5px 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .actions {
+      display: flex;
+      gap: 20px;
+    }
+
+    .actions button {
+      padding: 15px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+    }
+
+    .add-cart {
+      background: white;
+      border: 2px solid black;
+    }
+
+    .buy-now {
+      background: black;
+      color: white;
+    }
+
+    .tabs {
+      width: 1200px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .tab-buttons {
+      display: flex;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .tab-buttons button {
+      flex: 1;
+      padding: 15px;
+      background: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .tab-buttons button.active {
+      border-bottom: 3px solid black;
+    }
+
+    .tab-content {
+    padding: 20px;
+    min-height: 150px; /* giữ chiều cao tối thiểu để khung không co */
+    display: none;
+    width: 100%; /* giữ chiều ngang cố định */
+    box-sizing: border-box;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+    .review-section {
+    width: 1200px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    }
+
+    .review-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    }
+
+    .review-form label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #555;
+    }
+
+    .review-form input,
+    .review-form select,
+    .review-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    }
+
+    .review-form button {
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+
+    .review-form button:hover {
+    background-color: #0056b3;
+    }
+    .review-item {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    }
+
+  </style>
+  <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+</head>
+<body>
+ <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo" ><img src="../img/logo.jpg" width="70"></div>
+                <div class="brand-info">
+                    <h1>Cooktech</h1>
+                    <p>Chất lượng kim cương cho nhà bếp hiện đại</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" >Trang chủ</a></li>
+                    <li><a  href="../products.html" target="_blank">Sản phẩm</a></li>
+                    <li><a href="../about.html"target="_blank">Về chúng tôi</a></li>
+                    <li><a href="../Blog.html" target="_blank">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="login-btn" onclick="openModal()">Đăng nhập</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Giỏ hàng
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+  <div class="container">
+    <div class="gallery">
+      <img id="mainImage" src="img1.jpg" class="main-img" alt="Sản phẩm">
+      <div class="thumbnails">
+        <img src="img1.jpg" class="active" onclick="changeImage(this)">
+        <img src="img2.jpg" onclick="changeImage(this)">
+        <img src="img3.jpg" onclick="changeImage(this)">
+        <img src="img4.jpg" onclick="changeImage(this)">
+      </div>
+    </div>
+
+    <div class="details">
+      <h2> CookMate NEO Series (Bản thường các màu)</h2>
+      <div class="price">₫xx0.000</div>
+
+      <div class="options">
+        <h4>Màu Sắc</h4>
+        <div class="btn-group" id="colorOptions">
+          <button onclick="selectOption(this, 'color')">Màu Đen</button>
+          <button onclick="selectOption(this, 'color')">Màu Trắng</button>
+        </div>
+      </div>
+
+      <div class="options">
+        <h4>Size</h4>
+        <div class="btn-group" id="sizeOptions">
+          <button onclick="selectOption(this, 'size')">S</button>
+          <button onclick="selectOption(this, 'size')">M</button>
+          <button onclick="selectOption(this, 'size')">L</button>
+          <button onclick="selectOption(this, 'size')">XL</button>
+          <button onclick="selectOption(this, 'size')">XXL</button>
+        </div>
+      </div>
+
+      <div class="quantity">
+        <h4>Số Lượng:</h4>
+        <button onclick="updateQuantity(-1)">−</button>
+        <span id="quantity">1</span>
+        <button onclick="updateQuantity(1)">+</button>
+      </div>
+
+      <div class="actions">
+        <button class="add-cart">Thêm Vào Giỏ Hàng</button>
+        <button class="buy-now">Mua Ngay</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab-buttons">
+      <button class="active" onclick="showTab(0)">Mô Tả</button>
+      <button onclick="showTab(1)">Chi Tiết Kỹ Thuật</button>
+    </div>
+    <div class="tab-content active">
+      <h3>Mô tả sản phẩm</h3>
+      <p>CookMate AR – Tạp dề thông minh tích hợp công nghệ AR, giúp bạn nấu ăn chuẩn xác, dễ dàng và trực quan ngay trong gian bếp thật. Kết nối với app và thiết bị bếp thông minh, CookMate AR biến mọi công thức thành trải nghiệm sống động, tiện lợi và không cần nhớ bước.
+</p>
+    <h3>Thông tin sản phẩm</h3>
+    <p><h4>Kích thước:</h4> Có 3 size phù hợp từng vóc dáng:</p>
+    </div>
+    <div class="tab-content">
+      <h3>Chi tiết kỹ thuật</h3>
+      <ul>
+        <li>Chất liệu: 100% Cotton</li>
+        <li>Kiểu dáng: Basic, thêu logo</li>
+        <li>Màu sắc: Trắng, Đen</li>
+        <li>Size: S, M, L, XL, XXL</li>
+        <li>Thương hiệu: Ralph Lauren</li>
+      </ul>
+    </div>
+  </div>
+  <section class="review-section">
+  <h2>Đánh Giá Sản Phẩm</h2>
+  <div class="review-form">
+    <label for="name">Tên của bạn:</label>
+    <input type="text" id="name" placeholder="Nhập tên...">
+
+    <label for="rating">Đánh giá:</label>
+    <select id="rating">
+      <option value="5">⭐️⭐️⭐️⭐️⭐️ - Xuất sắc</option>
+      <option value="4">⭐️⭐️⭐️⭐️ - Tốt</option>
+      <option value="3">⭐️⭐️⭐️ - Trung bình</option>
+      <option value="2">⭐️⭐️ - Kém</option>
+      <option value="1">⭐️ - Tệ</option>
+    </select>
+
+    <label for="comment">Nhận xét:</label>
+    <textarea id="comment" rows="4" placeholder="Viết nhận xét của bạn..."></textarea>
+
+    <button type="submit">Gửi Đánh Giá</button>
+  </div>
+  <div id="review-list" class="review-list"></div>
+
+</section>
+</main>
+
+  <script>
+    function changeImage(el) {
+      document.getElementById('mainImage').src = el.src;
+      document.querySelectorAll('.thumbnails img').forEach(img => img.classList.remove('active'));
+      el.classList.add('active');
+    }
+
+    function selectOption(button, group) {
+      document.querySelectorAll(`#${group}Options button`).forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    }
+
+    function updateQuantity(change) {
+      const qtyEl = document.getElementById('quantity');
+      let qty = parseInt(qtyEl.textContent);
+      qty = Math.max(1, qty + change);
+      qtyEl.textContent = qty;
+    }
+
+    function showTab(index) {
+      document.querySelectorAll('.tab-buttons button').forEach((btn, i) => {
+        btn.classList.toggle('active', i === index);
+      });
+      document.querySelectorAll('.tab-content').forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+      });
+    }
+  </script>
+    <script>
+  const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+  function renderReviews() {
+    const container = document.getElementById("review-list");
+    container.innerHTML = "";
+
+    if (reviews.length === 0) {
+      container.innerHTML = "<p>Chưa có đánh giá nào.</p>";
+      return;
+    }
+
+    reviews.forEach((review, index) => {
+      const item = document.createElement("div");
+      item.className = "review-item";
+      item.innerHTML = `
+        <strong>${review.name}</strong> - ${"⭐️".repeat(review.rating)}
+        <p>${review.comment}</p>
+        <hr>
+      `;
+      container.appendChild(item);
+    });
+  }
+
+  document.querySelector(".review-form button").addEventListener("click", () => {
+    const name = document.getElementById("name").value.trim();
+    const rating = parseInt(document.getElementById("rating").value);
+    const comment = document.getElementById("comment").value.trim();
+
+    if (!name || !comment) {
+      alert("Vui lòng nhập đầy đủ tên và nhận xét.");
+      return;
+    }
+
+    const newReview = { name, rating, comment };
+    reviews.push(newReview);
+    localStorage.setItem("reviews", JSON.stringify(reviews));
+
+    document.getElementById("name").value = "";
+    document.getElementById("rating").value = "5";
+    document.getElementById("comment").value = "";
+
+    renderReviews();
+  });
+
+  // Hiển thị đánh giá khi trang tải
+  window.addEventListener("DOMContentLoaded", renderReviews);
+</script>
+
+</body>
+</html>
