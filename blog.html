@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Blog</title>
+  <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/base.css">
+    <link rel="stylesheet" href="./CSS/layout.css">
+    <link rel="stylesheet" href="./CSS/blog.css">
+</head>
+<body>
+   <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo" ><img src="./img/logo.jpg" width="70"></div>
+                <div class="brand-info">
+                    <h1>Cooktech</h1>
+                    <p>Chất lượng kim cương cho nhà bếp hiện đại</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html" >Trang chủ</a></li>
+                    <li><a  href="./products.html" target="_blank">Sản phẩm</a></li>
+                    <li><a href="./about.html"target="_blank">Về chúng tôi</a></li>
+                    <li><a href="./blog.html" target="_blank">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="login-btn" onclick="openModal()">Đăng nhập</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Giỏ hàng
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+     <main class="blog-container">
+    <article class="blog-post">
+      <img src="chefmate-cooking.jpg" alt="Chefmate cooking passion">
+      <h2>Khám phá đam mê nấu ăn cùng Chefmate</h2>
+      <p>Chefmate giúp bạn thỏa sức sáng tạo trong căn bếp và biến mỗi bữa ăn thành một trải nghiệm thú vị.</p>
+    </article>
+
+    <article class="blog-post">
+      <img src="july27.jpg" alt="Ngày thương binh liệt sĩ">
+      <h2>27/7 – Tri ân những người anh hùng</h2>
+      <p>Ngày tưởng niệm các thương binh liệt sĩ, ghi nhớ công lao của những người đã hy sinh vì Tổ quốc.</p>
+    </article>
+
+    <article class="blog-post">
+      <img src="breakfast.jpg" alt="Thói quen ăn sáng">
+      <h2>Bữa sáng Tây và Á – khác biệt và lý do nên ăn tại nhà</h2>
+      <p>So sánh thói quen ăn sáng giữa phương Tây và châu Á, cùng lý do vì sao bữa sáng tại nhà là lựa chọn tốt.</p>
+    </article>
+  </main>
+        <!-- Footer -->
+ <!-- Footer sẽ được load ở đây -->
+    <div id="footer-placeholder"></div>
+
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            })
+            .catch(err => console.error("Không thể tải footer:", err));
+    </script>
+
+    <script src="./JS/products.js"></script>
+    <script src="./JS/renderProducts.js"></script>
+    <script src="./JS/particles.js"></script>
+    <script src="./JS/sliders.js"></script>
+    <script src="./JS/cart.js"></script>
+    <script src="./JS/modal.js"></script>
+    <script src="./JS/newsletter.js"></script>
+    <script src="./JS/navigation.js"></script>
+    <script src="./JS/scrollAnimation.js"></script>
+    <script src="./JS/init.js"></script>
+    <script src="./JS/main.js"></script>
+    <script src="js/footer.js"></script> <!-- JS footer -->
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96a70c25166ffdb2',t:'MTc1NDQwNDgwMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+
+</body>
+</html>

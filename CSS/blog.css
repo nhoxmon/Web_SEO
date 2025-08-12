@@ -1,0 +1,68 @@
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e67e22;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+
+
+.blog-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.blog-post {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.blog-post img {
+  width: 300px;
+  border-radius: 6px;
+}
+
+.blog-post h2 {
+  margin-top: 10px;
+  color: #333;
+}
+
+.blog-post p {
+  color: #555;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pagination button {
+  background-color: #e0e0e0;
+  border: none;
+  margin: 0 5px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background-color: #2e7d32;
+  color: white;
+}
