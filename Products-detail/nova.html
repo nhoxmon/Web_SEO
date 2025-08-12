@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi Tiết Sản Phẩm</title>
+  <link rel="stylesheet" href="../CSS/product-details.css">
+  <link rel="stylesheet" href="../CSS/header.css">
+  <link rel="stylesheet" href="../CSS/base.css">
+  <link rel="stylesheet" href="../CSS/layout.css">
+</head>
+<body>
+ <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo" ><img src="../img/logo.jpg" width="70"></div>
+                <div class="brand-info">
+                    <h1>Cooktech</h1>
+                    <p>Chất lượng kim cương cho nhà bếp hiện đại</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" >Trang chủ</a></li>
+                    <li><a  href="../products.html" target="_blank">Sản phẩm</a></li>
+                    <li><a href="../about.html"target="_blank">Về chúng tôi</a></li>
+                    <li><a href="../Blog.html" target="_blank">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="login-btn" onclick="openModal()">Đăng nhập</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Giỏ hàng
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+      <div class="frames">
+  <div class="container">
+    <div class="gallery">
+      <img id="mainImage" src="../img/1.png" class="main-img" alt="Sản phẩm">
+      <div class="thumbnails">
+        <img src="img1.jpg" class="active" onclick="changeImage(this)">
+        <img src="img2.jpg" onclick="changeImage(this)">
+        <img src="img3.jpg" onclick="changeImage(this)">
+        <img src="img4.jpg" onclick="changeImage(this)">
+      </div>
+    </div>
+
+    <div class="details">
+      <h2> CookMate Nova Infinity</h2>
+      <div class="price">₫1499.000</div>
+      <div>
+        <h2>Ưu đãi thanh toán</h2>
+        <p>
+          <ul>Hỗ trợ trả góp 0% qua thẻ tín dụng</ul>
+          <ul>Hỗ trợ giảm 20% cho sinh viên</ul> 
+        </p>
+        <h2>Ưu đãi khác</h2>
+        <p>Trải nghiệm dùng thử 7 ngày miễn phí </p>
+        <p>Khách hàng mua Cookmate sẽ được chọn ngẫu nhiên 1 trong 5 "Secret Box" quà tặng:
+        <ul>🎧 1 tháng Spotify Premium (nghe nhạc khi nấu ăn)</ul>
+        <ul>🛒 Voucher nguyên liệu sạch từ đối tác</ul>
+        <ul>🎥 Mã học khóa nấu ăn online độc quyền từ các đầu bếp chuyên nghiệp</ul>
+        <ul>🎲 Bộ boardgame “MasterChef Tại Gia”</ul>
+        <ul>🍪 Hộp bánh handmade</ul>
+        </p>
+      </div>
+      <div class="options">
+        <h4>Màu Sắc</h4>
+        <div class="btn-group" id="colorOptions">
+          <button onclick="selectOption(this, 'color')">Màu Đen</button>
+          <button onclick="selectOption(this, 'color')">Màu Trắng</button>
+          <button onclick="selectOption(this, 'color')">Màu Xám</button>
+          <button onclick="selectOption(this, 'color')">Màu Hồng</button>
+          <button onclick="selectOption(this, 'color')">Màu Xanh</button>
+        </div>
+      </div>
+
+      <div class="options">
+        <h4>Size</h4>
+        <div class="btn-group" id="sizeOptions">
+          <button onclick="selectOption(this, 'size')">S</button>
+          <button onclick="selectOption(this, 'size')">M</button>
+          <button onclick="selectOption(this, 'size')">L</button>
+        </div>
+      </div>
+
+      <div class="quantity">
+        <h4>Số Lượng:</h4>
+        <button onclick="updateQuantity(-1)">−</button>
+        <span id="quantity">1</span>
+        <button onclick="updateQuantity(1)">+</button>
+         <div class="actions">
+        <button class="add-cart">Thêm Vào Giỏ Hàng</button>
+        <button class="buy-now">Mua Ngay</button>
+      </div>
+      </div>
+
+     
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab-buttons">
+      <button class="active" onclick="showTab(0)">Mô Tả</button>
+      <button onclick="showTab(1)">Hướng dẫn sử dụng</button>
+    </div>
+    <div class="tab-content active">
+      <h3>Mô tả sản phẩm</h3>
+      <p>CookMate phiên bản cao cấp mở ra trải nghiệm nấu ăn đỉnh cao – nơi công nghệ hòa quyện với sự sáng tạo, biến căn bếp thành không gian của cảm hứng và niềm vui mỗi ngày. Thiết kế tinh gọn với sạc từ tính không dây và thời lượng pin lên đến 12 giờ, sẵn sàng đồng hành trọn vẹn mọi khoảnh khắc.
+      </p>
+    <h3>Thông tin sản phẩm</h3>
+    <p><b>Kích thước:</b> Có 3 size phù hợp từng vóc dáng:</p>
+    <ul>
+    <li><b>S (Small):</b> Dài 70 cm × Rộng 60 cm – Phù hợp người cao dưới 1m60</li>
+    <li><b>M (Medium):</b> Dài 78 cm × Rộng 68 cm – Phổ thông, vừa hầu hết người dùng</li>
+    <li><b>L (Large):</b> Dài 85 cm × Rộng 75 cm – Dành cho người cao từ 1m75 trở lên hoặc thích form rộng</li>
+        <ul><i> (Dây đeo vai và dây buộc lưng đều có thể điều chỉnh linh hoạt)</i></ul>
+    </ul>
+    </p>
+    <p><b>Chất liệu vải:</b>  Vải nano sợi thủy tinh mềm mại + phủ chống bám dầu, chống tia UV, kháng khuẩn, chuẩn chống nước IP68, có thể rửa trực tiếp dưới vòi nước, co giãn nhẹ, thoáng khí, khô nhanh.
+</p>
+    <p><b>Thiết kế:</b>
+      <ul>
+        <li>Thiết kế dạng unisex, có thể điều chỉnh dây đeo linh hoạt ở cổ và eo.</li>
+        <li>Phối màu trung tính/thanh lịch: xám bạc, trắng, xanh dương, hồng pastel,… phù hợp với nhiều phong cách bếp.</li>
+        <li>Mặt trong thoáng khí, không gây nóng hay bí khi nấu ăn thời gian dài.</li>
+        <li>Túi trước rộng, được chia nhiều ngăn nhỏ để đựng điện thoại, thìa đũa, hoặc khăn lau.</li>
+        <li>Dây đeo vai và dây lưng điều chỉnh kích thước, có móc gài để treo khăn hoặc dụng cụ nhỏ.</li>
+        <li>Mắt camera hình vuông, kích thước 2.5cm, thiết kế đơn giản.</li>
+        <li>Logo in nổi đơn giản.</li>
+        <li>Trọng lượng nhẹ (~500g).</li>
+      </ul>
+    </p>
+    <p><b>Tính năng nổi bật:</b>
+      <ul>
+        <li><b>Màn hình AR ảo</b> chiếu công thức nấu ăn, thao tác minh họa và video hướng dẫn ngay trong bếp – không cần điện thoại, không đeo kính.</li>
+        <li><b>Camera tích hợp</b> giúp quét nguyên liệu, gợi ý món ăn phù hợp, cảnh báo cháy/khét.</li>
+        <li><b>Tương tác AI & chuyên gia: </b> Kết nối hỏi đáp 1:1 trực tiếp qua giọng nói.</li>
+        <li><b>Điều khiển bằng giọng nói: </b> Rảnh tay hoàn toàn khi nấu.</li>
+        <li><b>Ghi lại video Time-lapse</b> toàn bộ quá trình nấu ăn từ góc nhìn người thật.</li>
+        <li><b>Tự động kết nối và điều chỉnh các thiết bị bếp thông minh.</b></li>
+        <li><b>App CookMate:</b> Lưu công thức, xem lịch sử nấu, giao diện đơn giản.</li>
+        <li><b>Điều khiển giọng nói nâng cao</b> (đa ngôn ngữ, hiểu câu dài).</li>
+        <li><b>Quét nguyên liệu và gợi ý món ăn</b> kèm công thức tùy chỉnh.</li>
+        <li><b>Quay time-lapse toàn bộ</b> quá trình nấu <b>không giới hạn.</b> </li>
+      </ul>
+    </p>
+  
+  
+  
+  
+  
+  
+  </div>
+    <div class="tab-content">
+      <h3>Hướng dẫn sử dụng</h3>
+      <ul>
+        <li>Mặc tạp dề và đảm bảo phần camera hướng về phía trước.</li>
+        <li>Mở ứng dụng CookMate App nếu muốn đồng bộ tài khoản/lưu video.</li>
+        <li>Ra lệnh bằng giọng nói để bắt đầu nấu:
+          <br><q>CookMate, hướng dẫn làm bò kho</q>
+          <br><q>CookMate, còn gì nấu được với cà chua, trứng?</q>
+        </li>
+        <li>Thực hiện theo hình ảnh/clip nổi xuất hiện trong không gian thực.</li>
+        <li>Sau khi dùng xong, treo tạp dề lên giá để sạc tự động.</li>
+      </ul>
+      <h3>Hướng dẫn bảo quản</h3>
+      <ul>
+        <li>Sản phẩm đạt chuẩn chống nước – <b>IP68</b>, có thể <b>lau sạch bằng khăn ẩm hoặc giặt nhẹ bằng tay.</b></li>
+        <li>Tránh gập mạnh phần camera và màn chiếu tích hợp.</li>
+        <li>Sau khi sử dụng, <b>treo lên giá sạc từ tính đi kèm</b> để sạc và bảo quản.</li>
+        <li>Không dùng hóa chất tẩy mạnh lên bề mặt công nghệ.</li>
+      </ul>
+    </div>
+  </div>
+  <section class="review-section">
+  <h2>Đánh Giá Sản Phẩm</h2>
+  <div class="review-form">
+    <label for="name">Tên của bạn:</label>
+    <input type="text" id="name" placeholder="Nhập tên...">
+
+    <label for="rating">Đánh giá:</label>
+    <select id="rating">
+      <option value="5">⭐️⭐️⭐️⭐️⭐️ - Xuất sắc</option>
+      <option value="4">⭐️⭐️⭐️⭐️ - Tốt</option>
+      <option value="3">⭐️⭐️⭐️ - Trung bình</option>
+      <option value="2">⭐️⭐️ - Kém</option>
+      <option value="1">⭐️ - Tệ</option>
+    </select>
+
+    <label for="comment">Nhận xét:</label>
+    <textarea id="comment" rows="4" placeholder="Viết nhận xét của bạn..."></textarea>
+
+    <button type="submit">Gửi Đánh Giá</button>
+  </div>
+  <div id="review-list" class="review-list"></div>
+
+</section>
+</div>
+</main>
+
+      <!-- Footer -->
+ <!-- Footer sẽ được load ở đây -->
+<div id="footer-placeholder"></div>
+
+
+
+  <script>
+    function changeImage(el) {
+      document.getElementById('mainImage').src = el.src;
+      document.querySelectorAll('.thumbnails img').forEach(img => img.classList.remove('active'));
+      el.classList.add('active');
+    }
+
+    function selectOption(button, group) {
+      document.querySelectorAll(`#${group}Options button`).forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    }
+
+    function updateQuantity(change) {
+      const qtyEl = document.getElementById('quantity');
+      let qty = parseInt(qtyEl.textContent);
+      qty = Math.max(1, qty + change);
+      qtyEl.textContent = qty;
+    }
+
+    function showTab(index) {
+      document.querySelectorAll('.tab-buttons button').forEach((btn, i) => {
+        btn.classList.toggle('active', i === index);
+      });
+      document.querySelectorAll('.tab-content').forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+      });
+    }
+  </script>
+    <script>
+  const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+  function renderReviews() {
+    const container = document.getElementById("review-list");
+    container.innerHTML = "";
+
+    if (reviews.length === 0) {
+      container.innerHTML = "<p>Chưa có đánh giá nào.</p>";
+      return;
+    }
+
+    reviews.forEach((review, index) => {
+      const item = document.createElement("div");
+      item.className = "review-item";
+      item.innerHTML = `
+        <strong>${review.name}</strong> - ${"⭐️".repeat(review.rating)}
+        <p>${review.comment}</p>
+        <hr>
+      `;
+      container.appendChild(item);
+    });
+  }
+
+  document.querySelector(".review-form button").addEventListener("click", () => {
+    const name = document.getElementById("name").value.trim();
+    const rating = parseInt(document.getElementById("rating").value);
+    const comment = document.getElementById("comment").value.trim();
+
+    if (!name || !comment) {
+      alert("Vui lòng nhập đầy đủ tên và nhận xét.");
+      return;
+    }
+
+    const newReview = { name, rating, comment };
+    reviews.push(newReview);
+    localStorage.setItem("reviews", JSON.stringify(reviews));
+
+    document.getElementById("name").value = "";
+    document.getElementById("rating").value = "5";
+    document.getElementById("comment").value = "";
+
+    renderReviews();
+  });
+
+  // Hiển thị đánh giá khi trang tải
+  window.addEventListener("DOMContentLoaded", renderReviews);
+</script>
+
+
+
+<script>
+    fetch("../footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        })
+        .catch(err => console.error("Không thể tải footer:", err));
+</script>
+<script src="../../JS/footer.js"></script> <!-- JS footer -->
+</body>
+</html>

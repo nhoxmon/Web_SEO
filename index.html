@@ -67,9 +67,9 @@
                 </div>
             </div>
             <div class="hero-content">
-                <p id="heroDescription">Khuyến mãi ...</p>
-                <h2 id="heroTitle">COOKTECH AR - MẶC LÀ THẤY. NẤU LÀ MÊ</h2>
-                <p id="heroDescription">CookTech AR là tạp dề thông minh tích hợp công nghệ thực tế tăng cường (AR), giúp bạn nấu ăn dễ dàng mà không cần cầm điện thoại hay ghi nhớ công thức. Chỉ cần mặc vào, hệ thống sẽ hiển thị công thức nổi ngay trong không gian bếp, điều khiển bằng giọng nói, gợi ý món ăn theo nguyên liệu có sẵn và hỗ trợ toàn bộ quá trình nấu ăn - từ chuẩn bị đến hoàn thiện.
+                <p id="heroDescription"></p>
+                <h2 id="heroTitle">COOKMATE AR </h2>
+                <p id="heroDescription">CookMate AR là tạp dề thông minh tích hợp công nghệ thực tế tăng cường (AR), giúp bạn nấu ăn dễ dàng mà không cần cầm điện thoại hay ghi nhớ công thức. Chỉ cần mặc vào, hệ thống sẽ hiển thị công thức nổi ngay trong không gian bếp, điều khiển bằng giọng nói, gợi ý món ăn theo nguyên liệu có sẵn và hỗ trợ toàn bộ quá trình nấu ăn - từ chuẩn bị đến hoàn thiện.
                 </p>
                 <button class="cta-button" onclick="viewProducts()">Xem ngay</button>
             </div>
@@ -79,18 +79,18 @@
             <div class="frames-box">
                 <img src="img/photo-1729575846511-f499d2e17d79.jpg" alt="" />
             </div>
-            <div class="about-box">
-                <h2>CookTech NEO Series</h2>
-                <a href="./Products-detail/basic.html"> khuyến mãi 20%</a>
-                    <p></p>
-                <button onclick="viewProducts()">Xem ngay</button>
+            <div class="frames-box">
+                <h2>CookMate NEO Series</h2>
+                <a href="./Products-detail/neo.html"> khuyến mãi 20%</a>
+                    
+                
             </div>
         </div>
         <div class="frames-grid">
             
-            <div class="frames-box">
-                <h2 style="margin: auto;">CookTech Nova Infinity</h2>
-                <a href="./Products-detail/basic.html"> khuyến mãi 20%</a>
+            <div class="frames-box-left">
+                <h2 style="margin: auto;">CookMate Nova Infinity</h2>
+                <a href="./Products-detail/nova.html"> khuyến mãi 20%</a>
                     <p></p>
             </div>
             <div class="frames-box">
@@ -102,11 +102,11 @@
                 <img src="img/photo-1729575846511-f499d2e17d79.jpg" alt="" />
             </div>
             <div class="frames-box">
-                <h2>CookTech Nova Custom</h2>
+                <h2>CookMate Nova Custom</h2>
                     <p></p>
-                    <a href="./Products-detail/basic.html"> khuyến mãi 20%</a>
+                    <a href="./Products-detail/nova-custom.html"> khuyến mãi 20%</a>
                     <p></p>
-                <button onclick="viewProducts()">Xem ngay</button>
+                
             </div>
         </div>
          <video loop autoplay muted >
@@ -122,9 +122,27 @@
             <p id="total-reviews"></p>
         </div>
         <div class="rating-bars" id="rating-bars"></div>
-        <button class="write-review">Viết bài đánh giá</button>
-        </div>
+        
+        
+        <div class="review-form">
+    <label for="name">Tên của bạn:</label>
+    <input type="text" id="name" placeholder="Nhập tên...">
 
+    <label for="rating">Đánh giá:</label>
+    <select id="rating">
+      <option value="5">⭐️⭐️⭐️⭐️⭐️ - Xuất sắc</option>
+      <option value="4">⭐️⭐️⭐️⭐️ - Tốt</option>
+      <option value="3">⭐️⭐️⭐️ - Trung bình</option>
+      <option value="2">⭐️⭐️ - Kém</option>
+      <option value="1">⭐️ - Tệ</option>
+    </select>
+
+    <label for="comment">Nhận xét:</label>
+    <textarea id="comment" rows="4" placeholder="Viết nhận xét của bạn..."></textarea>
+    <button type="submit" class="write-review">Viết bài đánh giá</button>
+  </div>
+  </div>
+  <div id="review-list" class="review-list"></div>
         <div class="review-list" id="review-list"></div>
 
         <script src="./JS/scripts-reviews.js"></script>

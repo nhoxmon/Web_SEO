@@ -57,3 +57,51 @@ function renderStars(score) {
     const half = score % 1 >= 0.5 ? 1 : 0;
     return '★'.repeat(full) + (half ? '☆' : '') + '☆'.repeat(5 - full - half);
 }
+
+
+  const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+  function renderReviews() {
+    const container = document.getElementById("review-list");
+    container.innerHTML = "";
+
+    if (reviews.length === 0) {
+      container.innerHTML = "<p>Chưa có đánh giá nào.</p>";
+      return;
+    }
+
+    reviews.forEach((review, index) => {
+      const item = document.createElement("div");
+      item.className = "review-item";
+      item.innerHTML = `
+        <strong>${review.name}</strong> - ${"⭐️".repeat(review.rating)}
+        <p>${review.comment}</p>
+        <hr>
+      `;
+      container.appendChild(item);
+    });
+  }
+
+  document.querySelector(".review-form button").addEventListener("click", () => {
+    const name = document.getElementById("name").value.trim();
+    const rating = parseInt(document.getElementById("rating").value);
+    const comment = document.getElementById("comment").value.trim();
+
+    if (!name || !comment) {
+      alert("Vui lòng nhập đầy đủ tên và nhận xét.");
+      return;
+    }
+
+    const newReview = { name, rating, comment };
+    reviews.push(newReview);
+    localStorage.setItem("reviews", JSON.stringify(reviews));
+
+    document.getElementById("name").value = "";
+    document.getElementById("rating").value = "5";
+    document.getElementById("comment").value = "";
+
+    renderReviews();
+  });
+
+  // Hiển thị đánh giá khi trang tải
+  window.addEventListener("DOMContentLoaded", renderReviews);

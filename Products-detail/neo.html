@@ -3,220 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Chi Tiết Sản Phẩm</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 40px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #f9f9f9;
-    }
-
-    .container {
-      width: 100%;
-      width: 1200px;
-      display: flex;
-      gap: 40px;
-      background: white;
-      padding: 40px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .gallery {
-      width: 50%;
-    }
-
-    .main-img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      border: 1px solid #ccc;
-    }
-
-    .thumbnails {
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .thumbnails img {
-      width: 80px;
-      height: 80px;
-      object-fit: cover;
-      cursor: pointer;
-      border: 2px solid transparent;
-    }
-
-    .thumbnails img.active {
-      border-color: black;
-    }
-
-    .details {
-      width: 50%;
-    }
-
-    .price {
-      font-size: 24px;
-      color: #e53935;
-      margin: 10px 0;
-    }
-
-    .options {
-      margin: 20px 0;
-    }
-
-    .options h4 {
-      margin-bottom: 5px;
-    }
-
-    .btn-group {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .btn-group button {
-      padding: 10px 20px;
-      border: 1px solid #ccc;
-      background: white;
-      cursor: pointer;
-    }
-
-    .btn-group button.active {
-      border-color: black;
-      font-weight: bold;
-    }
-
-    .quantity {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin: 20px 0;
-    }
-
-    .quantity button {
-      padding: 5px 10px;
-      font-size: 18px;
-      cursor: pointer;
-    }
-
-    .actions {
-      display: flex;
-      gap: 20px;
-    }
-
-    .actions button {
-      padding: 15px 30px;
-      font-size: 16px;
-      cursor: pointer;
-      border: none;
-    }
-
-    .add-cart {
-      background: white;
-      border: 2px solid black;
-    }
-
-    .buy-now {
-      background: black;
-      color: white;
-    }
-
-    .tabs {
-      width: 1200px;
-      margin: 40px auto;
-      background: white;
-      padding: 40px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .tab-buttons {
-      display: flex;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .tab-buttons button {
-      flex: 1;
-      padding: 15px;
-      background: white;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .tab-buttons button.active {
-      border-bottom: 3px solid black;
-    }
-
-    .tab-content {
-    padding: 20px;
-    min-height: 150px; /* giữ chiều cao tối thiểu để khung không co */
-    display: none;
-    width: 100%; /* giữ chiều ngang cố định */
-    box-sizing: border-box;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-    .review-section {
-    width: 1200px;
-    margin: 40px auto;
-    background: #fff;
-    padding: 40px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    }
-
-    .review-section h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-    }
-
-    .review-form label {
-    display: block;
-    margin-top: 20px;
-    font-weight: bold;
-    color: #555;
-    }
-
-    .review-form input,
-    .review-form select,
-    .review-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    }
-
-    .review-form button {
-    margin-top: 30px;
-    padding: 12px 24px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    }
-
-    .review-form button:hover {
-    background-color: #0056b3;
-    }
-    .review-item {
-    margin-top: 20px;
-    padding: 10px;
-    background: #f9f9f9;
-    border-radius: 6px;
-    }
-
-  </style>
+  <link rel="stylesheet" href="../CSS/product-details.css">
   <link rel="stylesheet" href="../CSS/header.css">
-    <link rel="stylesheet" href="../CSS/base.css">
-    <link rel="stylesheet" href="../CSS/layout.css">
+  <link rel="stylesheet" href="../CSS/base.css">
+  <link rel="stylesheet" href="../CSS/layout.css">
 </head>
 <body>
  <!-- Particle Background -->
@@ -250,9 +40,10 @@
         </div>
     </header>
     <main>
+      <div class="frames">
   <div class="container">
     <div class="gallery">
-      <img id="mainImage" src="img1.jpg" class="main-img" alt="Sản phẩm">
+      <img id="mainImage" src="../img/1.png" class="main-img" alt="Sản phẩm">
       <div class="thumbnails">
         <img src="img1.jpg" class="active" onclick="changeImage(this)">
         <img src="img2.jpg" onclick="changeImage(this)">
@@ -262,9 +53,24 @@
     </div>
 
     <div class="details">
-      <h2> CookMate NEO Series (Bản thường các màu)</h2>
-      <div class="price">₫xx0.000</div>
-
+      <h2> CookMate NEO Series</h2>
+      <div class="price">₫999.000</div>
+      <div>
+        <h2>Ưu đãi thanh toán</h2>
+        <p>
+          <ul>Hỗ trợ trả góp 0% qua thẻ tín dụng</ul>
+          <ul>Hỗ trợ giảm 20% cho sinh viên</ul> 
+        </p>
+        <h2>Ưu đãi khác</h2>
+        <p>Trải nghiệm dùng thử 7 ngày miễn phí </p>
+        <p>Khách hàng mua Cookmate sẽ được chọn ngẫu nhiên 1 trong 5 "Secret Box" quà tặng:
+        <ul>🎧 1 tháng Spotify Premium (nghe nhạc khi nấu ăn)</ul>
+        <ul>🛒 Voucher nguyên liệu sạch từ đối tác</ul>
+        <ul>🎥 Mã học khóa nấu ăn online độc quyền từ các đầu bếp chuyên nghiệp</ul>
+        <ul>🎲 Bộ boardgame “MasterChef Tại Gia”</ul>
+        <ul>🍪 Hộp bánh handmade</ul>
+        </p>
+      </div>
       <div class="options">
         <h4>Màu Sắc</h4>
         <div class="btn-group" id="colorOptions">
@@ -282,8 +88,6 @@
           <button onclick="selectOption(this, 'size')">S</button>
           <button onclick="selectOption(this, 'size')">M</button>
           <button onclick="selectOption(this, 'size')">L</button>
-          <button onclick="selectOption(this, 'size')">XL</button>
-          <button onclick="selectOption(this, 'size')">XXL</button>
         </div>
       </div>
 
@@ -292,35 +96,86 @@
         <button onclick="updateQuantity(-1)">−</button>
         <span id="quantity">1</span>
         <button onclick="updateQuantity(1)">+</button>
-      </div>
-
-      <div class="actions">
+         <div class="actions">
         <button class="add-cart">Thêm Vào Giỏ Hàng</button>
         <button class="buy-now">Mua Ngay</button>
       </div>
+      </div>
+
+     
     </div>
   </div>
 
   <div class="tabs">
     <div class="tab-buttons">
       <button class="active" onclick="showTab(0)">Mô Tả</button>
-      <button onclick="showTab(1)">Chi Tiết Kỹ Thuật</button>
+      <button onclick="showTab(1)">Hướng dẫn sử dụng</button>
     </div>
     <div class="tab-content active">
       <h3>Mô tả sản phẩm</h3>
-      <p>CookMate AR – Tạp dề thông minh tích hợp công nghệ AR, giúp bạn nấu ăn chuẩn xác, dễ dàng và trực quan ngay trong gian bếp thật. Kết nối với app và thiết bị bếp thông minh, CookMate AR biến mọi công thức thành trải nghiệm sống động, tiện lợi và không cần nhớ bước.
+      <p>CookMate AR – Tạp dề thông minh tích hợp công nghệ AR, giúp bạn nấu ăn chuẩn xác, dễ dàng và trực quan ngay trong gian bếp thật. Kết nối với app và thiết bị bếp thông minh, CookMate AR biến mọi công thức thành trải nghiệm sống động, tiện lợi và không cần nhớ bước. Thiết kế tinh gọn với sạc từ tính không dây và thời lượng pin lên đến 8 giờ, sẵn sàng đồng hành trọn vẹn mọi khoảnh khắc.
 </p>
     <h3>Thông tin sản phẩm</h3>
-    <p><h4>Kích thước:</h4> Có 3 size phù hợp từng vóc dáng:</p>
-    </div>
-    <div class="tab-content">
-      <h3>Chi tiết kỹ thuật</h3>
+    <p><b>Kích thước:</b> Có 3 size phù hợp từng vóc dáng:</p>
+    <ul>
+    <li><b>S (Small):</b> Dài 70 cm × Rộng 60 cm – Phù hợp người cao dưới 1m60</li>
+    <li><b>M (Medium):</b> Dài 78 cm × Rộng 68 cm – Phổ thông, vừa hầu hết người dùng</li>
+    <li><b>L (Large):</b> Dài 85 cm × Rộng 75 cm – Dành cho người cao từ 1m75 trở lên hoặc thích form rộng</li>
+        <ul><i> (Dây đeo vai và dây buộc lưng đều có thể điều chỉnh linh hoạt)</i></ul>
+    </ul>
+    </p>
+    <p><b>Chất liệu vải:</b>  Polyester pha cotton, chống thấm mức cơ bản (IP54), it co giãn, dễ giặt nhưng lâu khô, khả năng chống bám dầu mỡ ở mức vừa.</p>
+    <p><b>Thiết kế:</b>
       <ul>
-        <li>Chất liệu: 100% Cotton</li>
-        <li>Kiểu dáng: Basic, thêu logo</li>
-        <li>Màu sắc: Trắng, Đen</li>
-        <li>Size: S, M, L, XL, XXL</li>
-        <li>Thương hiệu: Ralph Lauren</li>
+        <li>Thiết kế dạng unisex, có thể điều chỉnh dây đeo linh hoạt ở cổ và eo.</li>
+        <li>Phối màu trung tính/thanh lịch: xám bạc, trắng, xanh dương, hồng pastel,… phù hợp với nhiều phong cách bếp.</li>
+        <li>Mặt trong thoáng khí, không gây nóng hay bí khi nấu ăn thời gian dài.</li>
+        <li>Túi trước rộng, được chia nhiều ngăn nhỏ để đựng điện thoại, thìa đũa, hoặc khăn lau.</li>
+        <li>Dây đeo vai và dây lưng điều chỉnh kích thước, có móc gài để treo khăn hoặc dụng cụ nhỏ.</li>
+        <li>Mắt camera hình vuông, kích thước 2.5cm, thiết kế đơn giản.</li>
+        <li>Logo in nổi đơn giản.</li>
+        <li>Trọng lượng nhẹ (~500g).</li>
+      </ul>
+    </p>
+    <p><b>Tính năng nổi bật:</b>
+      <ul>
+        <li><b>Màn hình AR ảo</b> chiếu công thức nấu ăn, thao tác minh họa và video hướng dẫn ngay trong bếp – không cần điện thoại, không đeo kính.</li>
+        <li><b>Camera tích hợp</b> giúp quét nguyên liệu, gợi ý món ăn phù hợp, cảnh báo cháy/khét.</li>
+        <li><b>Tương tác AI & chuyên gia: </b> Kết nối hỏi đáp 1:1 trực tiếp qua giọng nói.</li>
+        <li><b>Điều khiển bằng giọng nói: </b> Rảnh tay hoàn toàn khi nấu.</li>
+        <li><b>Ghi lại video Time-lapse</b> toàn bộ quá trình nấu ăn từ góc nhìn người thật.</li>
+        <li><b>Tự động kết nối và điều chỉnh các thiết bị bếp thông minh.</b></li>
+        <li><b>App CookMate:</b> Lưu công thức, xem lịch sử nấu, giao diện đơn giản.</li>
+        <li>Điều khiển bằng giọng nói cơ bản.(đa ngôn ngữ)</li>
+        <li>Quét nguyên liệu, gợi ý 3-5 món đơn giản.</li>
+        <li>Hỗ trợ quay video tối đa 15 phút.</li>
+      </ul>
+    </p>
+  
+  
+  
+  
+  
+  
+  </div>
+    <div class="tab-content">
+      <h3>Hướng dẫn sử dụng</h3>
+      <ul>
+        <li>Mặc tạp dề và đảm bảo phần camera hướng về phía trước.</li>
+        <li>Mở ứng dụng CookMate App nếu muốn đồng bộ tài khoản/lưu video.</li>
+        <li>Ra lệnh bằng giọng nói để bắt đầu nấu:
+          <br><q>CookMate, hướng dẫn làm bò kho</q>
+          <br><q>CookMate, còn gì nấu được với cà chua, trứng?</q>
+        </li>
+        <li>Thực hiện theo hình ảnh/clip nổi xuất hiện trong không gian thực.</li>
+        <li>Sau khi dùng xong, treo tạp dề lên giá để sạc tự động.</li>
+      </ul>
+      <h3>Hướng dẫn bảo quản</h3>
+      <ul>
+        <li>Sản phẩm đạt chuẩn chống nước – <b>IP68</b>, có thể <b>lau sạch bằng khăn ẩm hoặc giặt nhẹ bằng tay.</b></li>
+        <li>Tránh gập mạnh phần camera và màn chiếu tích hợp.</li>
+        <li>Sau khi sử dụng, <b>treo lên giá sạc từ tính đi kèm</b> để sạc và bảo quản.</li>
+        <li>Không dùng hóa chất tẩy mạnh lên bề mặt công nghệ.</li>
       </ul>
     </div>
   </div>
@@ -347,7 +202,14 @@
   <div id="review-list" class="review-list"></div>
 
 </section>
+</div>
 </main>
+
+      <!-- Footer -->
+ <!-- Footer sẽ được load ở đây -->
+<div id="footer-placeholder"></div>
+
+
 
   <script>
     function changeImage(el) {
@@ -426,5 +288,16 @@
   window.addEventListener("DOMContentLoaded", renderReviews);
 </script>
 
+
+
+<script>
+    fetch("../footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        })
+        .catch(err => console.error("Không thể tải footer:", err));
+</script>
+<script src="../../JS/footer.js"></script> <!-- JS footer -->
 </body>
 </html>
