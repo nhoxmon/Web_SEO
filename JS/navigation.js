@@ -3,7 +3,7 @@ function viewProducts() {
 }
 
 function viewProductsDetails() {
-    window.location.href = 'products-details.html'; // Đường dẫn đến trang HTML mới
+    window.location.href = 'details.html'; // Đường dẫn đến trang HTML mới
 }
 
 document.querySelectorAll('nav a').forEach(link => {

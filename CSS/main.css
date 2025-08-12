@@ -3,12 +3,11 @@
 @import url('./layout.css');
 @import url('./header.css');
 @import url('./hero.css');
-@import url('./products.css');
-@import url('./chatbox.css');
 @import url('./footer.css');
 @import url('./modal.css');
 @import url('./animation.css');
 @import url('./responsive.css');
-@import url('./details.css');
-@import url('./style.css');
+@import url('./about.css');
 @import url('./reviews.css');
+@import url('./category.css');
+@import url('./products.css');

@@ -2,7 +2,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(254, 239, 221, 0.95);
+    background: #1a2954;
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 2rem;
@@ -38,7 +38,7 @@ header {
 
 .brand-info h1 {
     font-size: 1.8rem;
-    color: #201E1F;
+    color: white;
     margin-bottom: 0.2rem;
 }
 
@@ -51,10 +51,15 @@ header {
 nav ul {
     display: flex;
     list-style: none;
+    justify-content: space-around; /* hoặc space-between */
+    flex: 1; /* giúp ul giãn đầy chiều ngang */
+    margin: 0;
+    padding: 0;
     gap: 2rem;
 }
 
 nav a {
+    color: white;
     font-weight: 500;
     position: relative;
     transition: all 0.3s ease;

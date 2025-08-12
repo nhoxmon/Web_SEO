@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookmate - Thiết Bị Điện Tử Nhà Bếp Cao Cấp</title>
-    <meta name="description" content="Cookmate - Thương hiệu thiết bị điện tử nhà bếp hàng đầu với chất lượng kim cương, công nghệ hiện đại">
+    <meta name="description" content="Cooktech - Thương hiệu thiết bị điện tử nhà bếp hàng đầu với chất lượng kim cương, công nghệ hiện đại">
     <meta name="keywords" content="thiết bị nhà bếp, điện tử, Cookmate, nồi cơm điện, máy xay sinh tố">
     <link rel="stylesheet" href="./CSS/main.css">
 </head>
@@ -16,15 +16,15 @@
     <header>
         <div class="header-container">
             <div class="logo-section">
-                <div class="logo" ><img src="./img/logo_official.jpg" width="50"></div>
+                <div class="logo" ><img src="./img/logo.jpg" width="70"></div>
                 <div class="brand-info">
-                    <h1>Cookmate</h1>
+                    <h1>Cooktech</h1>
                     <p>Chất lượng kim cương cho nhà bếp hiện đại</p>
                 </div>
             </div>
             <nav>
                 <ul>
-                    <li><a href="./index.html">Trang chủ</a></li>
+                    <li><a href="./index.html" >Trang chủ</a></li>
                     <li><a  href="./products.html" target="_blank">Sản phẩm</a></li>
                     <li><a href="./about.html"target="_blank">Về chúng tôi</a></li>
                     <li><a href="./Blog.html" target="_blank">Blog</a></li>
@@ -36,7 +36,6 @@
                     🛒 Giỏ hàng
                     <span class="cart-count" id="cartCount">0</span>
                 </button>
-                <button class="policy-btn">Chính sách</button>
             </div>
         </div>
     </header>
@@ -75,6 +74,7 @@
             <div class="about-box">
                 <h2>xxxxxxx</h2>
                     <p></p>
+                <button class="cta-button" onclick="viewProducts()">Xem ngay</button>
             </div>
         </div>
         <div class="frames-grid">
@@ -96,6 +96,9 @@
                     <p></p>
             </div>
         </div>
+         <video loop autoplay muted >
+                <source src="./img/rain.mp4" type="video/mp4">
+        </video>
         <div class="section-header">
                 MỌI NGƯỜI NÓI GÌ VỀ COOKMATE
         </div>
@@ -132,38 +135,17 @@
 
 
     <!-- Footer -->
-    <footer class="fade-in">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Liên Hệ</h4>
-                <p>📧 info@cookmate.vn</p>
-                <p>📞 1900-COOKMATE</p>
-                <p>📍 XXX đường XXX, Phường XXX, TP.HCM</p>
-            </div>
-            <div class="footer-section">
-                <h4>Về Cookmate</h4>
-                <p>Cookmate cam kết mang đến những thiết bị nhà bếp chất lượng kim cương với công nghệ tiên tiến nhất, giúp mọi gia đình Việt có những bữa ăn ngon và ý nghĩa.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Đăng Ký Nhận Tin</h4>
-                <p>Nhận thông tin khuyến mãi và sản phẩm mới nhất</p>
-                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
-                    <input type="email" class="newsletter-input" placeholder="Email của bạn" required>
-                    <button type="submit" class="newsletter-btn">Đăng ký</button>
-                </form>
-            </div>
-            <div class="footer-section">
-            <a href="#"><img src="./img/icons8-facebook.svg" alt="Facebook" width="50px"></a>
-            <a href="#"><img src="./img/icons8-instagram.svg" alt="Instagram"width="50px"></a>
-            <a href="#"><img src="./img/icons8-zalo.svg" alt="Zalo"width="50px"></a>
-        </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Cookmate. Tất cả quyền được bảo lưu.</p>
-        </div>
-        
-    </footer>
+ <!-- Footer sẽ được load ở đây -->
+<div id="footer-placeholder"></div>
 
+<script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        })
+        .catch(err => console.error("Không thể tải footer:", err));
+</script>
 
 
 
@@ -208,6 +190,8 @@
 <script src="./JS/scrollAnimation.js"></script>
 <script src="./JS/init.js"></script>
 <script src="./JS/main.js"></script>
+  <script src="js/footer.js"></script> <!-- JS footer -->
 
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96a70c25166ffdb2',t:'MTc1NDQwNDgwMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96a70c25166ffdb2',t:'MTc1NDQwNDgwMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
 </html>

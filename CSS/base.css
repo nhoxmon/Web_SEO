@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #FEEFDD 0%, #50B2C0 100%);
+    background: linear-gradient(135deg, #FEEFDD 100%, #50B2C0 0%);
     color: #201E1F;
     overflow-x: hidden;
 }

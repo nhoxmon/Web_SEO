@@ -139,6 +139,8 @@ video{
   height: 600px;
   border-radius: 10px;
   object-fit: cover;
+  display: block;       /* Đảm bảo là block element */
+  margin: 0 auto;       /* Căn giữa theo chiều ngang */
 }
 
 .frames-box h2 {

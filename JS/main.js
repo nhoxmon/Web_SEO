@@ -1,4 +1,4 @@
-import { products } from './products.js';
+
 
 function renderProducts() {
   const container = document.getElementById('productList');
@@ -20,3 +20,8 @@ function renderProducts() {
 }
 
 document.addEventListener('DOMContentLoaded', renderProducts);
+
+
+
+
+
