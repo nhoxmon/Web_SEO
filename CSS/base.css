@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #FEEFDD 100%, #50B2C0 0%);
+    background: linear-gradient(135deg, white 100%, #50B2C0 0%);
     color: #201E1F;
     overflow-x: hidden;
 }
@@ -9,3 +9,4 @@ a {
     text-decoration: none;
     color: inherit;
 }
+

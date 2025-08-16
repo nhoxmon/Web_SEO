@@ -7,6 +7,7 @@
     <meta name="description" content="Cooktech - Thương hiệu thiết bị điện tử nhà bếp hàng đầu với chất lượng kim cương, công nghệ hiện đại">
     <meta name="keywords" content="thiết bị nhà bếp, điện tử, Cookmate, nồi cơm điện, máy xay sinh tố">
     <link rel="stylesheet" href="./CSS/main.css">
+  
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JT2GZ0DH9W"></script>
     <script>
@@ -24,18 +25,20 @@
     <header>
         <div class="header-container">
             <div class="logo-section">
-                <div class="logo" ><img src="./img/logo.jpg" width="70"></div>
+                <div class="logo" ><img src="./img/logo.jpg" width="80"></div>
                 <div class="brand-info">
                     <h1>Cooktech</h1>
-                    <p>Chất lượng kim cương cho nhà bếp hiện đại</p>
+                    <p1>CÔNG NGHỆ DẪN LỐI</p1>
+                    <br>
+                    <p2><tab>Nâng tầm phong cách nấu ăn</tab></p2>
                 </div>
             </div>
             <nav>
                 <ul>
                     <li><a href="./index.html" >Trang chủ</a></li>
-                    <li><a  href="./products.html" target="_blank">Sản phẩm</a></li>
-                    <li><a href="./about.html"target="_blank">Về chúng tôi</a></li>
-                    <li><a href="./blog.html" target="_blank">Blog</a></li>
+                    <li><a  href="./products.html" >Sản phẩm</a></li>
+                    <li><a href="./about.html">Về chúng tôi</a></li>
+                    <li><a href="./blog.html" >Blog</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
@@ -57,9 +60,9 @@
         <!-- Hero Section -->
         <section class="hero fade-in" id="home">
             <div class="hero-images">
-                <div class="product-image active" data-product="0"><img src="./img/hinh_anh_sp_cookmate_ar.jpg" width="500px"></div>
-                <div class="product-image" data-product="1">🥘</div>
-                <div class="product-image" data-product="2">☕</div>
+                <div class="product-image active" data-product="0"><img src="./img/BANNER.jpg" width="510px"></div>
+                <div class="product-image" data-product="1"><img src="./img/BANNER_thuong.jpg" width="510px"></div>
+                <div class="product-image" data-product="2"><img src="./img/KICHEN_PROJECT.jpg" width="510px"></div>
                 <div class="image-nav">
                     <div class="nav-dot active" onclick="changeProduct(0)"></div>
                     <div class="nav-dot" onclick="changeProduct(1)"></div>
@@ -93,7 +96,7 @@
                 <a href="./Products-detail/nova.html"> khuyến mãi 20%</a>
                     <p></p>
             </div>
-            <div class="frames-box">
+            <div class="frames-box-left">
                 <img src="img/photo-1729575846511-f499d2e17d79.jpg" alt="" />
             </div>
         </div>
@@ -112,34 +115,8 @@
          <video loop autoplay muted >
                 <source src="./img/rain.mp4" type="video/mp4">
         </video>
-        <div class="section-header">
-                MỌI NGƯỜI NÓI GÌ VỀ COOKTECH
-        </div>
-        <div class="review-summary">
-        <div class="average-rating">
-            <span class="score" id="avg-score"></span>
-            <span class="stars" id="avg-stars"></span>
-            <p id="total-reviews"></p>
-        </div>
-        <div class="rating-bars" id="rating-bars"></div>
         
-        
-        <div class="review-form">
-    <label for="name">Tên của bạn:</label>
-    <input type="text" id="name" placeholder="Nhập tên...">
-
-    <label for="rating">Đánh giá:</label>
-    <select id="rating">
-      <option value="5">⭐️⭐️⭐️⭐️⭐️ - Xuất sắc</option>
-      <option value="4">⭐️⭐️⭐️⭐️ - Tốt</option>
-      <option value="3">⭐️⭐️⭐️ - Trung bình</option>
-      <option value="2">⭐️⭐️ - Kém</option>
-      <option value="1">⭐️ - Tệ</option>
-    </select>
-
-    <label for="comment">Nhận xét:</label>
-    <textarea id="comment" rows="4" placeholder="Viết nhận xét của bạn..."></textarea>
-    <button type="submit" class="write-review">Viết bài đánh giá</button>
+   
   </div>
   </div>
   <div id="review-list" class="review-list"></div>

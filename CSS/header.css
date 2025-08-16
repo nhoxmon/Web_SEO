@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Charmonman';
+  src: url('../font/Charmonman-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Charmonman';
+  src: url('../font/Charmonman-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
 header {
     position: fixed;
     top: 0;
@@ -40,13 +56,23 @@ header {
     font-size: 1.8rem;
     color: white;
     margin-bottom: 0.2rem;
+    text-align: center;
 }
 
-.brand-info p {
+.brand-info p1 {
     font-size: 0.9rem;
-    color: #50B2C0;
+    color: white;
     font-style: italic;
+    text-align: left;
 }
+
+.brand-info p2 {
+    font-size: 0.9rem;
+    color: white;
+    font-family: 'Charmonman', sans-serif;
+    margin-left: 50px;
+}
+
 
 nav ul {
     display: flex;
