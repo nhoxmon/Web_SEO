@@ -47,12 +47,13 @@
       <div class="frames">
   <div class="container">
     <div class="gallery">
-      <img id="mainImage" src="../img/1.png" class="main-img" alt="Sản phẩm">
+      <img id="mainImage" src="../img/den.png" class="main-img" alt="Sản phẩm">
       <div class="thumbnails">
-        <img src="img1.jpg" class="active" onclick="changeImage(this)">
-        <img src="img2.jpg" onclick="changeImage(this)">
-        <img src="img3.jpg" onclick="changeImage(this)">
-        <img src="img4.jpg" onclick="changeImage(this)">
+        <img id="den" src="../img/den.png" class="active" onclick="changeImage(this)">
+        <img id="xam" src="../img/XAM.png" onclick="changeImage(this)">
+        <img id="hong" src="../img/HONG.png" onclick="changeImage(this)">
+        <img src="../img/XANH_DUONG.png" onclick="changeImage(this)">
+        <img src="../img/XANH_NGOC.png" onclick="changeImage(this)">
       </div>
     </div>
 
@@ -78,11 +79,11 @@
       <div class="options">
         <h4>Màu Sắc</h4>
         <div class="btn-group" id="colorOptions">
-          <button onclick="selectOption(this, 'color')">Màu Đen</button>
-          <button onclick="selectOption(this, 'color')">Màu Trắng</button>
-          <button onclick="selectOption(this, 'color')">Màu Xám</button>
-          <button onclick="selectOption(this, 'color')">Màu Hồng</button>
-          <button onclick="selectOption(this, 'color')">Màu Xanh</button>
+          <button onclick="changeImageByColor('den')">Màu Đen</button>
+          <button onclick="changeImageByColor('xam')">Màu Xám</button>
+          <button onclick="changeImageByColor('hong')">Màu Hồng</button>
+          <button onclick="changeImageByColor('xanh_duong')">Màu Xanh Dương</button>
+          <button onclick="changeImageByColor('xanh_ngoc')">Màu Xanh Ngọc</button>
         </div>
       </div>
 
@@ -215,34 +216,73 @@
 
 
 
-  <script>
-    function changeImage(el) {
-      document.getElementById('mainImage').src = el.src;
-      document.querySelectorAll('.thumbnails img').forEach(img => img.classList.remove('active'));
-      el.classList.add('active');
-    }
+      <script>
+      // ✅ Đổi ảnh chính khi click vào thumbnail
+      function changeImage(el) {
+        document.getElementById('mainImage').src = el.src;
 
-    function selectOption(button, group) {
-      document.querySelectorAll(`#${group}Options button`).forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-    }
+        // Xóa class 'active' khỏi tất cả thumbnail
+        document.querySelectorAll('.thumbnails img').forEach(img => img.classList.remove('active'));
 
-    function updateQuantity(change) {
-      const qtyEl = document.getElementById('quantity');
-      let qty = parseInt(qtyEl.textContent);
-      qty = Math.max(1, qty + change);
-      qtyEl.textContent = qty;
-    }
+        // Gán class 'active' cho thumbnail được chọn
+        el.classList.add('active');
+      }
 
-    function showTab(index) {
-      document.querySelectorAll('.tab-buttons button').forEach((btn, i) => {
-        btn.classList.toggle('active', i === index);
-      });
-      document.querySelectorAll('.tab-content').forEach((tab, i) => {
-        tab.classList.toggle('active', i === index);
-      });
-    }
-  </script>
+      // ✅ Chọn nút option (ví dụ: màu sắc, kích thước...) và làm nút đó active
+      function selectOption(button, group) {
+        document.querySelectorAll(`#${group}Options button`).forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      }
+
+      // ✅ Cập nhật số lượng sản phẩm (tăng/giảm)
+      function updateQuantity(change) {
+        const qtyEl = document.getElementById('quantity');
+        let qty = parseInt(qtyEl.textContent);
+        qty = Math.max(1, qty + change); // Không cho giảm dưới 1
+        qtyEl.textContent = qty;
+      }
+
+      // ✅ Chuyển tab nội dung (mô tả, đánh giá, thông số...)
+      function showTab(index) {
+        document.querySelectorAll('.tab-buttons button').forEach((btn, i) => {
+          btn.classList.toggle('active', i === index);
+        });
+        document.querySelectorAll('.tab-content').forEach((tab, i) => {
+          tab.classList.toggle('active', i === index);
+        });
+      }
+
+      // ✅ Đổi ảnh chính khi click vào nút màu (liên kết với ảnh tương ứng)
+      function changeImageByColor(colorId) {
+        const imageMap = {
+          den: "../img/den.png",
+          xam: "../img/XAM.png",
+          hong: "../img/HONG.png",
+          xanh_duong: "../img/XANH_DUONG.png",
+          xanh_ngoc: "../img/XANH_NGOC.png"
+        };
+
+        // Đổi ảnh chính
+        const mainImage = document.getElementById("mainImage");
+        mainImage.src = imageMap[colorId];
+
+        // Cập nhật thumbnail active
+        const thumbnails = document.querySelectorAll(".thumbnails img");
+        thumbnails.forEach(img => {
+          img.classList.remove("active");
+          if (img.id === colorId) {
+            img.classList.add("active");
+          }
+        });
+
+        // Cập nhật nút màu active
+        document.querySelectorAll("#colorOptions button").forEach(btn => btn.classList.remove("active"));
+        const selectedBtn = Array.from(document.querySelectorAll("#colorOptions button")).find(btn =>
+          btn.textContent.toLowerCase().includes(colorId.replace('_', ' '))
+        );
+        if (selectedBtn) selectedBtn.classList.add("active");
+      }
+    </script>
     <script>
   const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
 

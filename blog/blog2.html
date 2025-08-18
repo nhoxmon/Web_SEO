@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Blog</title>
+  <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/blog.css">
+</head>
+<body>
+   <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo" ><img src="../img/logo.jpg" width="80"></div>
+                <div class="brand-info">
+                    <h1>Cooktech</h1>
+                    <p1>CÔNG NGHỆ DẪN LỐI</p1>
+                    <br>
+                    <p2><tab>Nâng tầm phong cách nấu ăn</tab></p2>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" >Trang chủ</a></li>
+                    <li><a  href="../products.html" >Sản phẩm</a></li>
+                    <li><a href="../about.html">Về chúng tôi</a></li>
+                    <li><a href="../blog.html" >Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="login-btn" onclick="openModal()">Đăng nhập</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Giỏ hàng
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="blog-detail">
+            <img src="../img/Blog2.JPG" alt="Người đang nấu ăn trong bếp" class="header-image">
+
+            <h1>Lần đầu con sống xa nhà – tôi không thể ở cạnh, nhưng CookMate AR thì có thể</h1>
+
+            <blockquote>
+            “Mẹ không thể nấu cho con mỗi bữa, nhưng mẹ muốn con vẫn được ăn ngon, ăn đủ, và ăn bằng chính tay mình.”   
+            </blockquote>
+            <p> – Một tin nhắn tôi gửi cho con trước ngày con chuyển đến thành phố mới.</p>
+            <h2>Ngày con rời nhà, tôi đã lặng lẽ đặt vào vali con một chiếc tạp dề. Không phải là chiếc bình thường. Là CookMate AR.</h2>
+            <p>
+                Tôi biết, chẳng đứa trẻ nào mới 18–20 tuổi lại hào hứng với chuyện bếp núc.
+            <br>Cơm tiệm thì tiện, đồ ăn nhanh thì rẻ, mà nấu ăn… thì phiền.
+            </p>
+            <p>
+            Nhưng tôi không muốn con mình sống kiểu “có gì ăn nấy”. Tôi muốn con được chăm sóc – bằng chính bàn tay mình.
+            </p>
+            <p>
+                Tôi không thể ở đó nhắc con hâm nóng đồ ăn, rửa sạch rau, hay nêm nếm vừa tay…
+            <br>Nhưng CookMate AR thì có thể.
+            </p>
+    
+            <h1>
+                CookMate AR – như có tôi ở cạnh con trong căn bếp xa lạ
+            </h1>
+            
+            <p>
+                Khi đeo tạp dề vào, mở app lên, CookMate AR sẽ giúp
+                <ul>-        Hướng dẫn con từng bước nấu ăn qua công nghệ thực tế ảo tăng cường (AR)</ul>
+                <ul>-        Hiện công thức, khối lượng, cách nấu ngay trong không gian bếp</ul>
+                <ul>-        Tự điều chỉnh theo chế độ ăn (nếu con đang giảm cân, ăn chay...)</ul>
+                <ul>-        Nhắc khi con để lửa quá lâu, hay đảo không đều</ul>
+            </p>
+            <p>
+            Nó không thay thế tình cảm gia đình. Nhưng ít ra, nó giúp tôi bớt lo, giúp con bớt áp lực trong cuộc sống mới.
+            </p>
+            <h2>
+                Tôi đã thấy con gửi ảnh món ăn đầu tiên nó nấu. Không hoàn hảo. Nhưng tôi rơi nước mắt.
+            </h2>
+            <p>
+                Đó là một đĩa trứng cuộn đơn giản, với vài cọng hành hơi cháy.
+            <br>Nhưng kèm theo ảnh, là dòng chữ:
+            </p>
+            <p><i>
+                “Con tự làm nè mẹ. Nhờ cái tạp dề thần kỳ của mẹ á.”
+            </i></p>
+            <p>
+                Tôi không cần gì hơn.
+            </p>
+
+            <h1>
+                Con đường con đi, tôi không thể đi cùng. Nhưng tôi vẫn có thể gửi theo một chút yêu thương.
+            </h1>
+            
+            <p>
+                Không phải ai cũng cần CookMate AR.
+            <br>Nhưng nếu bạn, giống như tôi là một phụ huynh đang chuẩn bị cho con mình ra riêng, thì tôi tin… bạn sẽ hiểu tại sao tôi chọn món quà nhỏ ấy.
+            </p>
+            <p>
+                Đó không chỉ là tạp dề. Đó là một lời nhắn ngầm:
+            </p>
+            <p><i>
+                “Dù mẹ không ở đây, mẹ vẫn dõi theo từng bữa cơm con nấu.”
+            </i></p>
+            <h2>
+                👉 Bạn có một đứa con sắp xa nhà? Hãy cho con mang theo một chút ấm áp, từ chính căn bếp thân quen.
+            </h2>
+            <p>
+                <br>#CookMateAR 
+                <br>#TapDeGuiYeuthuong
+                <br>#ConXaNhaVanNgonMieng 
+                <br>#BepLaNha
+                <br>#MeKhongTheOBenNhungCookMateCoThe 
+                <br>#MonQuaTuGiaDinh
+                <br>#GenZVaoBep
+            </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="blog-actions">
+            <a href="../blog.html" class="back-button">← Quay lại</a>
+            <a href="#" class="share-button">📤 Chia sẻ bài viết</a>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+ <!-- Footer sẽ được load ở đây -->
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch("../footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        })
+        .catch(err => console.error("Không thể tải footer:", err));
+</script>
+
+
+</body>
+</html>

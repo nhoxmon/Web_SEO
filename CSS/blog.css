@@ -63,6 +63,87 @@ nav a {
 }
 
 .pagination .active {
-  background-color: #2e7d32;
+  background-color: #1a2954;
   color: white;
+}
+
+.blog-post.horizontal {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.blog-post.horizontal img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.blog-text {
+  flex: 1;
+}
+
+.blog-text h2 {
+  margin-top: 0;
+  color: #1a2954;
+}
+
+.blog-text p {
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.blog-text a {
+  color: #1a2954;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+/* CSS blog con */
+.blog-detail {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  color: #1a2954;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #1a2954;
+  margin-bottom: 10px;
+}
+
+blockquote {
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #1a2954;
+  padding-left: 15px;
+  margin: 20px 0;
+}
+
+.blog-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-button,
+.share-button {
+  text-decoration: none;
+  color: #1a2954;
+  font-weight: bold;
 }
