@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách</title>
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/base.css">
+    <link rel="stylesheet" href="./CSS/layout.css">
+    <link rel="stylesheet" href="./CSS/blog.css">
+    <link rel="stylesheet" href="./CSS/policy.css">
+    <link rel="stylesheet" href="./CSS/responsive.css">
+  
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JT2GZ0DH9W"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JT2GZ0DH9W');
+    </script>
+
+    <!--Start of Fchat.vn-->
+    <script type="text/javascript" src="https://cdn.fchat.vn/assets/embed/webchat.js?id=68a444230e75d5466b0cdb66" async="async">
+    </script>
+    <!--End of Fchat.vn-->
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo" ><img src="./img/logo.jpg" width="80"></div>
+                <div class="brand-info">
+                    <h1>Cooktech</h1>
+                    <p1>CÔNG NGHỆ DẪN LỐI</p1>
+                    <br>
+                    <p2><tab>Nâng tầm phong cách nấu ăn</tab></p2>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html" >Trang chủ</a></li>
+                    <li><a  href="./products.html" >Sản phẩm</a></li>
+                    <li><a href="./about.html">Về chúng tôi</a></li>
+                    <li><a href="./blog.html" >Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="login-btn" onclick="openModal()">Đăng nhập</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Giỏ hàng
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <section class="block-title">
+        <h1>CHÍNH SÁCH</h1>
+    </section>
+
+    <a href="./policy/chinh-sach-van-chuyen.html" class="block-link">
+    <section class="block-policy">
+        <h2>CHÍNH SÁCH VẬN CHUYỂN</h2>
+    </section>
+    </a>
+
+    <a href="./policy/chinh-sach-bao-hanh.html" class="block-link">
+    <section class="block-policy">
+        <h2>CHÍNH SÁCH BẢO HÀNH</h2>
+    </section>
+    </a>
+
+    <a href="./policy/chinh-sach-doi-tra.html" class="block-link">
+    <section class="block-policy">
+        <h2>CHÍNH SÁCH ĐỔI TRẢ</h2>
+    </section>
+    </a>
+
+    <a href="./policy/chinh-sach-bao-mat.html" class="block-link">
+    <section class="block-policy">
+        <h2>CHÍNH SÁCH BẢO MẬT</h2>
+    </section>
+    </a>
+
+    <a href="./policy/phuong-thuc-thanh-toan.html" class="block-link">
+    <section class="block-policy">
+        <h2>PHƯƠNG THỨC THANH TOÁN</h2>
+    </section>
+    </a>
+
+
+    </main>
+
+            <!-- Footer -->
+    <!-- Footer sẽ được load ở đây -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            })
+            .catch(err => console.error("Không thể tải footer:", err));
+    </script>
+
+</body>
+</html>

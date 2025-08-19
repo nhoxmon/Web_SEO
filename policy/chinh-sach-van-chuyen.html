@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/policy.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+  
+</head>
+<body>
+     <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo" ><img src="../img/logo.jpg" width="80"></div>
+                <div class="brand-info">
+                    <h1>Cooktech</h1>
+                    <p1>CÔNG NGHỆ DẪN LỐI</p1>
+                    <br>
+                    <p2><tab>Nâng tầm phong cách nấu ăn</tab></p2>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" >Trang chủ</a></li>
+                    <li><a  href="../products.html" >Sản phẩm</a></li>
+                    <li><a href="../about.html">Về chúng tôi</a></li>
+                    <li><a href="../blog.html" >Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="login-btn" onclick="openModal()">Đăng nhập</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Giỏ hàng
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>CHÍNH SÁCH VẬN CHUYỂN</h1>
+        <h2>1. Phạm vi áp dụng</h2>
+        <p>Chính sách vận chuyển áp dụng cho tất cả khách hàng đặt mua sản phẩm CookTech
+        <br>thông qua các kênh chính thức sau:
+        <ol>
+            <li>Website chính thức: CookTech.io.vn</li>
+            <li>Fanpage Facebook CookTech - VietNam</li>
+            <li>Các sàn thương mại điện tử Shopee, Lazada,TikTok shop</li>
+        </ol>
+        </p>
+    </main>
+
+    
+            <!-- Footer -->
+    <!-- Footer sẽ được load ở đây -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch("../footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            })
+            .catch(err => console.error("Không thể tải footer:", err));
+    </script>
+</body>
+</html>

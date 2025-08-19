@@ -1,9 +1,17 @@
-main {
-    margin-top: 100px;
-}
+
 
 @media (max-width: 768px) {
-    main {
-        margin-top: 150px;
-    }
+    
+}
+
+/* Reset margin/padding mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Đảm bảo body và html chiếm toàn bộ chiều ngang */
+html, body {
+  width: 100%;
 }

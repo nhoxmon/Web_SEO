@@ -1,0 +1,52 @@
+
+/* Block 1: Tiêu đề chính */
+.block-title {
+  background-color: #ff6600;
+  color: #004080;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.block-title h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Block 2: Chính sách vận chuyển */
+.block-policy {
+  background-color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+.block-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Xen kẽ màu nền cho từng block */
+.block-link:nth-child(odd) .block-policy {
+  background-color: #cac9c9;
+}
+
+.block-link:nth-child(even) .block-policy {
+  background-color: #ffffff;
+}
+
+.block-policy h2 {
+  font-size: 2rem;
+  font-weight: 600;
+
+}
+
+.block-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.block-link:hover .block-policy {
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}

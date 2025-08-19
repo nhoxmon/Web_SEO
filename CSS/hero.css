@@ -17,8 +17,7 @@
 video{
     display: block;
     width: 100vw;
-
-    
+    height: auto;
 }
 
 
@@ -113,15 +112,20 @@ video{
 }
 
 
+.ads-product{
+    position: relative;
+}
 
 .frames-grid {
   display: grid;
+  position: relative;
   grid-template-columns: 1fr 1fr;
   gap: 0; /* Không khoảng cách giữa các box */
   padding: 0; /* Không khoảng cách ngoài */
 }
 
 .frames-box {
+    position: relative;
   background: transparent;
   padding: 1.5rem;
   border: none;
@@ -150,7 +154,7 @@ video{
 .frames-box h2 {
   color: #ff6f00;
   margin-bottom: 1rem;
- 
+  margin: 0 auto;
 }
 
 .frames-box-left h2 {
@@ -161,12 +165,8 @@ video{
 
 .frames-box-left a {
   margin-bottom: 1rem;
-  margin-left: 200px;
-}
-
-
-.frames-box p {
-  line-height: 1.6;
-  font-size: 1.1rem;
+  margin-left: 30%;
   text-align: center;
 }
+
+
