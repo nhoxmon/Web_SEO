@@ -226,33 +226,72 @@
 
 
   <script>
-    function changeImage(el) {
-      document.getElementById('mainImage').src = el.src;
-      document.querySelectorAll('.thumbnails img').forEach(img => img.classList.remove('active'));
-      el.classList.add('active');
-    }
+      // ✅ Đổi ảnh chính khi click vào thumbnail
+      function changeImage(el) {
+        document.getElementById('mainImage').src = el.src;
 
-    function selectOption(button, group) {
-      document.querySelectorAll(`#${group}Options button`).forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-    }
+        // Xóa class 'active' khỏi tất cả thumbnail
+        document.querySelectorAll('.thumbnails img').forEach(img => img.classList.remove('active'));
 
-    function updateQuantity(change) {
-      const qtyEl = document.getElementById('quantity');
-      let qty = parseInt(qtyEl.textContent);
-      qty = Math.max(1, qty + change);
-      qtyEl.textContent = qty;
-    }
+        // Gán class 'active' cho thumbnail được chọn
+        el.classList.add('active');
+      }
 
-    function showTab(index) {
-      document.querySelectorAll('.tab-buttons button').forEach((btn, i) => {
-        btn.classList.toggle('active', i === index);
-      });
-      document.querySelectorAll('.tab-content').forEach((tab, i) => {
-        tab.classList.toggle('active', i === index);
-      });
-    }
-  </script>
+      // ✅ Chọn nút option (ví dụ: màu sắc, kích thước...) và làm nút đó active
+      function selectOption(button, group) {
+        document.querySelectorAll(`#${group}Options button`).forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      }
+
+      // ✅ Cập nhật số lượng sản phẩm (tăng/giảm)
+      function updateQuantity(change) {
+        const qtyEl = document.getElementById('quantity');
+        let qty = parseInt(qtyEl.textContent);
+        qty = Math.max(1, qty + change); // Không cho giảm dưới 1
+        qtyEl.textContent = qty;
+      }
+
+      // ✅ Chuyển tab nội dung (mô tả, đánh giá, thông số...)
+      function showTab(index) {
+        document.querySelectorAll('.tab-buttons button').forEach((btn, i) => {
+          btn.classList.toggle('active', i === index);
+        });
+        document.querySelectorAll('.tab-content').forEach((tab, i) => {
+          tab.classList.toggle('active', i === index);
+        });
+      }
+
+      // ✅ Đổi ảnh chính khi click vào nút màu (liên kết với ảnh tương ứng)
+      function changeImageByColor(colorId) {
+        const imageMap = {
+          den: "../img/den.png",
+          xam: "../img/XAM.png",
+          hong: "../img/HONG.png",
+          xanh_duong: "../img/XANH_DUONG.png",
+          xanh_ngoc: "../img/XANH_NGOC.png"
+        };
+
+        // Đổi ảnh chính
+        const mainImage = document.getElementById("mainImage");
+        mainImage.src = imageMap[colorId];
+
+        // Cập nhật thumbnail active
+        const thumbnails = document.querySelectorAll(".thumbnails img");
+        thumbnails.forEach(img => {
+          img.classList.remove("active");
+          if (img.id === colorId) {
+            img.classList.add("active");
+          }
+        });
+
+        // Cập nhật nút màu active
+        document.querySelectorAll("#colorOptions button").forEach(btn => btn.classList.remove("active"));
+        const selectedBtn = Array.from(document.querySelectorAll("#colorOptions button")).find(btn =>
+          btn.textContent.toLowerCase().includes(colorId.replace('_', ' '))
+        );
+        if (selectedBtn) selectedBtn.classList.add("active");
+      }
+    </script>
     <script>
   const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
 
