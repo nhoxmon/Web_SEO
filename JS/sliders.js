@@ -1,4 +1,5 @@
 let currentProduct = 0;
+let autoSlideInterval;
 
 function changeProduct(index) {
     document.querySelectorAll('.product-image').forEach((img, i) => {
@@ -12,7 +13,13 @@ function changeProduct(index) {
     currentProduct = index;
 }
 
-setInterval(() => {
-    currentProduct = (currentProduct + 1) % products.length;
-    changeProduct(currentProduct);
-}, 5000);
+// Tự động chuyển ảnh 
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+        let nextIndex = (currentProduct + 1) % document.querySelectorAll('.product-image').length;
+        changeProduct(nextIndex);
+    }, 2000);
+}
+
+// Khởi động khi trang load
+window.addEventListener('DOMContentLoaded', startAutoSlide);

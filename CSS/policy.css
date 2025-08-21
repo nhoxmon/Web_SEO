@@ -16,6 +16,10 @@
 /* Block 2: Chính sách vận chuyển */
 .block-policy {
   background-color: #fff;
+  padding: 50px 20px;
+}
+
+.block-policy h2{
   text-align: center;
   padding: 50px 20px;
 }
@@ -26,11 +30,11 @@
 }
 
 /* Xen kẽ màu nền cho từng block */
-.block-link:nth-child(odd) .block-policy {
+.block-policy:nth-child(odd) {
   background-color: #cac9c9;
 }
 
-.block-link:nth-child(even) .block-policy {
+.block-policy:nth-child(even)  {
   background-color: #ffffff;
 }
 
@@ -39,6 +43,7 @@
   font-weight: 600;
 
 }
+
 
 .block-link {
   text-decoration: none;
@@ -54,17 +59,16 @@
 
 
 /* Layout tổng thể */
-.policy-container {
-  max-width: 800px;
+.policy-content {
+  max-width: 1000px;
   margin: 40px auto;
   padding: 20px 30px;
-  background-color: #fff;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
   border-radius: 8px;
 }
 
 /* Tiêu đề chính */
-.policy-container h1 {
+.policy-content h1 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: #1a2954;
@@ -73,28 +77,38 @@
 }
 
 /* Tiêu đề phụ */
-.policy-container h2 {
-  font-size: 1.4rem;
+.policy-content h3 {
+  font-size: 1.6rem;
   margin-top: 30px;
   margin-bottom: 10px;
   color: #1a2954;
+  margin-left: 3rem;
+}
+.policy-content h4 {
+  font-size: 1.2rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #1a2954;
+  margin-left: 3rem;
 }
 
 /* Đoạn văn bản */
-.policy-container p {
+.policy-content p {
   margin-bottom: 15px;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  margin-left: 4rem;
 }
 
 /* Danh sách */
-.policy-container ul {
-  margin-left: 20px;
-  list-style-type: disc;
-  margin-bottom: 0.5rem;
+.policy-content ul {
+  margin-left: 5rem;
+  list-style-type: decimal;
+  margin-bottom: 1.4rem;
 }
 
+
 /* Link */
-.policy-container a {
+.policy-content a {
   color: #1a2954;
   text-decoration: underline;
 }
@@ -102,6 +116,29 @@
 .policy-container a:hover {
   text-decoration: none;
   color: #0056b3;
+}
+/* ẩn hiện nội dung */
+.policy-content {
+  display: none;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ccc;
+}
+
+.block-policy.active .policy-content {
+  display: block;
+}
+
+.block-policy {
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.block-policy:hover {
+  background-color: #f0f0f0;
 }
 
 /* Responsive */
