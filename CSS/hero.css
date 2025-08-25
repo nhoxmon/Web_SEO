@@ -158,6 +158,9 @@ video{
   margin: 0 auto;
 }
 
+.frames-box a{
+    color: red;
+}
 .frames-box-left h2 {
   color: #ff6f00;
   margin-bottom: 1rem;
@@ -166,6 +169,7 @@ video{
 }
 
 .frames-box-left a {
+    color: red;
   margin-bottom: 1rem;
   margin-left: 52%;
   text-align: right;
