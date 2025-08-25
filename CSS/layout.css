@@ -1,19 +1,57 @@
 
 
 @media (max-width: 768px) {
-  .frames-box-left h2 {
-    font-size: 1.5rem;
+  .frames-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .frames-box,
+  .frames-box-left {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
     text-align: center;
-    padding-right: 0;
-    padding-left: 0;
-    margin: 0 auto 1rem;
+  }
+
+  .frames-box img,
+  .frames-box-left img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .frames-box h2,
+  .frames-box-left h2 {
+    text-align: center;
+    margin: 1rem 0 0.5rem;
+    max-width: 100%;
   }
 
   .frames-box-left a {
-    display: block;
-    margin: 0 auto 1rem;
+    margin: 0 auto;
     text-align: center;
-    font-size: 1rem;
+    display: block;
+  }
+  
+  /* ép thứ tự cho từng khung */
+  .frames-grid:nth-child(1) > div:nth-child(1) {
+    order: 1; /* chữ xuống dưới */
+  }
+
+  .frames-grid:nth-child(1) > div:nth-child(2) {
+    order: 2; /* ảnh lên trên */
+  }
+
+  .frames-grid:nth-child(2) > div:nth-child(1) {
+    order: 2; /* ảnh lên trên */
+  }
+
+  .frames-grid:nth-child(2) > div:nth-child(2) {
+    order: 1; /* chữ xuống dưới */
   }
 }
 
