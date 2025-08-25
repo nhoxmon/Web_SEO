@@ -10,8 +10,9 @@
     }
 
     .container {
+      max-width: 1200px;
       width: 100%;
-      width: 1200px;
+      margin: 0 auto;
       display: flex;
       gap: 40px;
       background: white;
@@ -90,6 +91,8 @@
       align-items: center;
       gap: 10px;
       margin: 20px 0;
+      flex-direction: row; /* Đảm bảo xếp ngang */
+      justify-content: left; /* Căn giữa toàn bộ khối */
     }
 
     .quantity button {
@@ -208,4 +211,3 @@
     background: #f9f9f9;
     border-radius: 6px;
     }
-

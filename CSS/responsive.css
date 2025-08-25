@@ -128,11 +128,19 @@
               grid-template-columns: 1fr;
               padding: 1rem;
             }
-
+           
             .about-box {
               padding: 1rem;
             }
 
+            /* Phần giữa: đảo lại thứ tự hình và chữ */
+            .about-grid > .about-box:nth-child(3) {
+              order: 2; /* hình xuống dưới */
+            }
+
+            .about-grid > .about-box:nth-child(4) {
+              order: 1; /* chữ lên trên */
+            }
             .about-box img {
               width: 100%;
               height: auto;

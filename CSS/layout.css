@@ -1,6 +1,7 @@
 
 
 @media (max-width: 768px) {
+  /*========Tùy chỉnh index=============*/
   .frames-grid {
     display: flex;
     flex-direction: column;
@@ -52,6 +53,115 @@
 
   .frames-grid:nth-child(2) > div:nth-child(2) {
     order: 1; /* chữ xuống dưới */
+  }
+  /*====Tùy chỉnh product-details======*/
+  .container{
+    flex-direction: column !important;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+  }
+   .gallery,
+  .details {
+    width: 100%;
+  }
+
+  .main-img {
+    height: auto;
+    max-height: 400px;
+  }
+
+  .thumbnails {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .thumbnails img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .price {
+    font-size: 30px;
+    text-align: left;
+  }
+
+  .options h4 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .btn-group {
+    justify-content: center;
+  }
+
+  .quantity {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .actions button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .tabs,
+  .review-section {
+    width: 100%;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .tab-buttons {
+    flex-direction: column;
+  }
+
+  .tab-buttons button {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .review-form input,
+  .review-form select,
+  .review-form textarea {
+    font-size: 14px;
+  }
+
+  .review-form button {
+    width: 100%;
+  }
+
+  /*=======blog========*/
+  .blog-post.horizontal {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .blog-post.horizontal img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .blog-text {
+    padding: 0 10px;
+  }
+
+  .blog-text h2 {
+    font-size: 1.1rem;
+  }
+
+  .blog-text p {
+    font-size: 1rem;
   }
 }
 
