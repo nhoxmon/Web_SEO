@@ -63,9 +63,18 @@
     <article class="blog-post horizontal">
     <img src="./img/Blog1.JPG" alt="">
     <div class="blog-text">
-      <h2>BLOG #1: "Nấu ăn không phải là nghĩa vụ – đó là hành trình kết nối yêu thương"</h2>
-      <p>"Chẳng có gì gọi là nấu ăn dở, chỉ là chưa tìm được cách nấu ăn khiến bạn vui" – một người bạn từng nói với tôi như thế.</p>
+      <h2>BLOG #1: “Nấu ăn không phải là nghĩa vụ – đó là hành trình kết nối yêu thương”</h2>
+      <p>“Chẳng có gì gọi là nấu ăn dở, chỉ là chưa tìm được cách nấu ăn khiến bạn vui” – một người bạn từng nói với tôi như thế.</p>
       <a href="./blog/blog1.html">Xem thêm</a>
+
+      <div class="blog-meta ">
+        <span class="date">Ngày đăng: 21/08/2025</span>
+        <span class="views">👁️ 394 lượt xem</span>
+        <span class="likes">
+          <button class="like-btn">❤️</button>
+          <span class="like-count">11</span>
+        </span>
+      </div>
     </div>
   </article>
 
@@ -76,14 +85,41 @@
         <h2>BLOG #2: “Lần đầu con sống xa nhà – tôi không thể ở cạnh, nhưng CookMate AR thì có thể”</h2>
         <p><i>“Mẹ không thể nấu cho con mỗi bữa, nhưng mẹ muốn con vẫn được ăn ngon, ăn đủ, và ăn bằng chính tay mình.”</i></p>
         <a href="./blog/blog2.html">Xem thêm</a>
+
+        <div class="blog-meta ">
+        <span class="date">Ngày đăng: 28/08/2025</span>
+        <span class="views">👁️ 267 lượt xem</span>
+        <span class="likes">
+          <button class="like-btn">❤️</button>
+          <span class="like-count"> 43 </span>
+        </span>
+      </div>
       </div>
     </article>
-    <article class="blog-post">
-      <img src="" alt="">
-      <h2>BLOG #: </h2>
-      <p><i></i></p>
-      <a href="https://www.example.com">Xem thêm</a>
+
+
+    <article class="blog-post horizontal">
+      <img src="./img/Blog3.png" alt="">
+      <div class="blog-text">
+      <h2>BLOG #3: “CookMate AR – Trợ thủ công nghệ mới trong căn bếp của bạn”</h2>
+      <p> 
+                Bạn đã bao giờ tự hỏi: <b><i>Liệu một chiếc tạp dề có thể giúp mình nấu ăn ngon hơn không?</i></b> Nghe có vẻ lạ, nhưng câu trả lời là hoàn toàn có thể – với CookMate AR, chiếc tạp dề thông minh tích hợp công nghệ AR (Augmented Reality) đầu tiên tại Việt Nam.
+      </p>
+      <a href="./blog/blog3.html">Xem thêm</a>
+    
+      <div class="blog-meta ">
+        <span class="date">Ngày đăng: 04/09/2025</span>
+        <span class="views">👁️ 124 lượt xem</span>
+        <span class="likes">
+          <button class="like-btn">❤️</button>
+          <span class="like-count">32</span>
+        </span>
+      </div>
+      </div>
     </article>
+
+
+
     <article class="blog-post">
       <img src="" alt="">
       <h2>BLOG #: </h2>
@@ -104,6 +140,23 @@
             })
             .catch(err => console.error("Không thể tải footer:", err));
     </script>
+
+
+    <!--Phần script cho số lượt thích-->
+    <script>
+      document.querySelectorAll('.like-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const countSpan = btn.nextElementSibling;
+          let count = parseInt(countSpan.textContent);
+          countSpan.textContent = count + 1;
+          btn.style.color = 'red';
+          btn.disabled = true; // chỉ cho thả tim 1 lần
+        });
+      });
+    </script>
+
+
+
 
     <script src="./JS/products.js"></script>
     <script src="./JS/renderProducts.js"></script>

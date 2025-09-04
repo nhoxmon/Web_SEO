@@ -31,6 +31,8 @@ nav a {
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+  padding-bottom: 40px; /* để chừa chỗ cho meta info */
 }
 
 .blog-post img {
@@ -45,6 +47,36 @@ nav a {
 
 .blog-post p {
   color: #555;
+}
+
+.blog-meta {
+  
+  margin-top: 1rem;
+  font-size: 0.9em;
+  color: #555;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.like-btn {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.like-btn:hover {
+  transform: scale(1.3);
+  color: red;
+}
+
+.like-count {
+  margin-left: 5px;
+  font-weight: bold;
 }
 
 .pagination {
@@ -122,9 +154,14 @@ h1 {
 }
 
 h2 {
+  margin-top: 10px;
   font-size: 1.5em;
   color: #1a2954;
   margin-bottom: 10px;
+}
+
+.blog-detail p,li{
+  margin-top: 5px;
 }
 
 blockquote {
@@ -146,4 +183,22 @@ blockquote {
   text-decoration: none;
   color: #1a2954;
   font-weight: bold;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .blog-meta {
+    gap: 8px;
+    font-size: 0.85em;
+  }
+
+  .like-btn {
+    font-size: 1em;
+  }
+
+  .like-count {
+    font-size: 0.9em;
+  }
 }

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Blog</title>
+  <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/blog.css">
+</head>
+<body>
+   <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo" ><img src="../img/logo.jpg" width="80"></div>
+                <div class="brand-info">
+                    <h1>Cooktech</h1>
+                    <p1>CÔNG NGHỆ DẪN LỐI</p1>
+                    <br>
+                    <p2><tab>Nâng tầm phong cách nấu ăn</tab></p2>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" >Trang chủ</a></li>
+                    <li><a  href="../products.html" >Sản phẩm</a></li>
+                    <li><a href="../about.html">Về chúng tôi</a></li>
+                    <li><a href="../blog.html" >Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="login-btn" onclick="openModal()">Đăng nhập</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Giỏ hàng
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="blog-detail">
+            <img src="../img/Blog3.png" alt="Người đang nấu ăn trong bếp" class="header-image">
+
+            <h1>CookMate AR – Trợ thủ công nghệ mới trong căn bếp của bạn</h1>
+
+            <p> 
+                Bạn đã bao giờ tự hỏi: <b><i>Liệu một chiếc tạp dề có thể giúp mình nấu ăn ngon hơn không?</i></b> Nghe có vẻ lạ, nhưng câu trả lời là hoàn toàn có thể – với CookMate AR, chiếc tạp dề thông minh tích hợp công nghệ AR (Augmented Reality) đầu tiên tại Việt Nam.
+            </p>
+
+            <h2>Nấu ăn – niềm vui hay áp lực?</h2>
+            <p>
+                Trong nhịp sống bận rộn ngày nay, việc nấu ăn đôi khi trở thành một “bài toán khó”. Chúng ta thường xuyên vừa cầm điện thoại để xem công thức, vừa lo đảo chảo hay canh bếp, dễ dẫn đến xao nhãng, món ăn hỏng, hay thậm chí là… rơi cả điện thoại xuống nồi. Không ít người vì vậy mà cảm thấy áp lực mỗi lần bước vào bếp.
+            </p>
+            <p>
+                CookMate AR ra đời để thay đổi hoàn toàn trải nghiệm này.
+            </p>
+    
+            <h2>
+                CookMate AR – khi công nghệ bước vào căn bếp
+            </h2>
+            <p>
+                CookMate AR không đơn thuần là một chiếc tạp dề. Đây là sự kết hợp giữa thiết kế tiện dụng và công nghệ thực tế tăng cường AR hiện đại, giúp việc nấu ăn trở nên trực quan, đơn giản và thú vị hơn bao giờ hết.
+            </p>
+            <p>
+                Chỉ cần đeo CookMate AR, bạn sẽ thấy:
+                <li>Công thức hiển thị trực tiếp trước mắt: Không cần vừa nấu vừa lướt điện thoại.</li>
+                <li>Hướng dẫn từng bước rõ ràng: Mọi thao tác đều minh họa trực quan, dễ làm theo</li>
+                <li>Tiết kiệm thời gian: Giúp bạn hoàn thành món ăn nhanh hơn, không bỏ sót bước.</li>
+                <li>Trải nghiệm sáng tạo: Khuyến khích bạn biến tấu công thức, tạo nên dấu ấn cá nhân.</li>
+            </p>
+            <p>
+                CookMate AR giống như một “trợ lý ảo” ngay trong bếp, luôn sẵn sàng đồng hành cùng bạn trong từng bữa ăn.
+            </p>
+
+            <h2>
+                Vì sao bạn nên trải nghiệm CookMate AR?
+            </h2>
+            <p>
+                Điều đặc biệt ở CookMate AR không chỉ nằm ở công nghệ, mà còn ở giá trị mà nó mang lại:
+                    <li>Giảm bớt áp lực: Nấu ăn trở thành niềm vui chứ không phải gánh nặng.</li>
+                    <li>Kết nối gia đình, bạn bè: Cùng nhau vào bếp, tận hưởng những khoảnh khắc gắn kết.</li>
+                    <li>Khám phá một phong cách sống mới: Đưa công nghệ vào đời sống hàng ngày một cách gần gũi, thiết thực.</li>
+            </p>
+            <p>
+                CookMate AR không chỉ giúp bạn nấu ăn ngon hơn – mà còn giúp bạn tận hưởng trọn vẹn trải nghiệm ấy.
+            </p>
+
+            <h2>
+                Hãy bắt đầu hành trình nấu ăn công nghệ
+            </h2>
+            
+            <p>
+                Căn bếp không chỉ là nơi chế biến thức ăn, mà còn là nơi lưu giữ những kỷ niệm, những phút giây sum vầy. Với CookMate AR, những khoảnh khắc ấy sẽ trở nên hiện đại hơn, tiện lợi hơn, và đầy cảm hứng hơn.
+            </p>
+            <h2>
+                👉 Khám phá ngay CookMate AR tại website chính thức để trải nghiệm công nghệ nấu ăn thông minh đầu tiên trên tạp dề.
+            </h2>
+            <p>
+                <br>#CookMateAR 
+                <br>#TapDeThongMinh
+                <br>#NoiNhoNhaTrongCanBep
+                <br>#NauAnLaYeuThuong
+                <br>#GiaDinhTrongTungMonAn
+                <br>#TuNauTuThuong
+            </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="blog-actions">
+            <a href="../blog.html" class="back-button">← Quay lại</a>
+            <a href="#" class="share-button">📤 Chia sẻ bài viết</a>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+ <!-- Footer sẽ được load ở đây -->
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch("../footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        })
+        .catch(err => console.error("Không thể tải footer:", err));
+</script>
+
+
+</body>
+</html>
