@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Blog</title>
+  <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/blog.css">
+</head>
+<body>
+   <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo" ><img src="../img/logo.jpg" width="80"></div>
+                <div class="brand-info">
+                    <h1>Cooktech</h1>
+                    <p1>CÔNG NGHỆ DẪN LỐI</p1>
+                    <br>
+                    <p2><tab>Nâng tầm phong cách nấu ăn</tab></p2>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" >Trang chủ</a></li>
+                    <li><a  href="../products.html" >Sản phẩm</a></li>
+                    <li><a href="../about.html">Về chúng tôi</a></li>
+                    <li><a href="../blog.html" >Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="login-btn" onclick="openModal()">Đăng nhập</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Giỏ hàng
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="blog-detail">
+            <img src="../img/blog4.png" alt="Người đang nấu ăn trong bếp" class="header-image">
+
+            <h1>CookMate AR – Giải pháp cho người trẻ bận rộn yêu thích nấu ăn</h1>
+
+            <p> 
+            Bạn là sinh viên phải xoay sở với lịch học dày đặc? Hay là nhân viên văn phòng thường xuyên về muộn, bụng đói nhưng lại ngại vào bếp vì vừa tốn thời gian vừa lo “nấu dở”? Đây chính là nỗi niềm chung của rất nhiều người trẻ: muốn ăn ngon, sống healthy nhưng lại chẳng có nhiều thời gian và kinh nghiệm nấu nướng.
+            </p>
+
+            <p>
+                Vậy thì <b>CookMate AR</b> chính là “trợ thủ” bạn đang tìm kiếm.
+            </p>
+            <h2>Nấu ăn nhanh – không còn là thử thách</h2>
+            <p>
+            CookMate AR sử dụng công nghệ AR thông minh, hiển thị công thức ngay trước mắt bạn. Không cần vừa nấu vừa loay hoay lướt điện thoại để tìm cách làm – mọi thứ đều được hướng dẫn trực quan, từng bước một.
+            </p>
+            <p>
+                👉 Chỉ cần đeo thiết bị, bạn đã có “bếp trưởng riêng” ngay trong căn bếp của mình.
+            </p>
+    
+            <h2>
+                Tự tin vào bếp, dù bạn chưa từng nấu nhiều
+            </h2>
+            <p>
+            Dù bạn không giỏi nấu ăn, CookMate AR vẫn giúp mọi thứ trở nên dễ dàng. Các bước nấu ăn được hướng dẫn rõ ràng, kèm mẹo nhỏ để tiết kiệm thời gian. Kết quả? Bạn có thể chuẩn bị một bữa ăn đầy đủ dinh dưỡng chỉ trong thời gian ngắn, vừa ngon vừa healthy.
+            </p>
+
+
+            <h2>
+                CookMate AR – Dành riêng cho người trẻ bận rộn
+            </h2>
+            <p>
+                Với CookMate AR, việc nấu ăn không còn là gánh nặng mà trở thành trải nghiệm thú vị. Đây chính là công cụ dành cho:
+                <li><b>Sinh viên</b> muốn tiết kiệm chi phí ăn ngoài, tự nấu ăn vừa rẻ vừa tốt cho sức khỏe.</li>
+                <li><b>Người đi làm</b> muốn cân bằng công việc – cuộc sống (<b>work-life balance</b>) nhưng vẫn tận hưởng bữa cơm nhà chất lượng.</li>
+            </p>
+            <br>
+            <p>
+                ✨ CookMate AR – Trợ thủ nhà bếp cho bạn, những người bận rộn nhưng vẫn muốn ăn ngon và sống khỏe.
+            </p>
+            <br>
+            <p>
+                #CookTechVietNam
+                <br>#CookMateAR 
+                <br>#tutinvaobep
+            </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="blog-actions">
+            <a href="../blog.html" class="back-button">← Quay lại</a>
+            <a href="#" class="share-button">📤 Chia sẻ bài viết</a>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+ <!-- Footer sẽ được load ở đây -->
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch("../footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        })
+        .catch(err => console.error("Không thể tải footer:", err));
+</script>
+
+
+</body>
+</html>
