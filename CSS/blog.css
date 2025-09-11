@@ -147,6 +147,11 @@ nav a {
   margin-bottom: 20px;
 }
 
+.blog-detail p{
+  margin-bottom: 1rem;
+}
+
+
 h1 {
   font-size: 2em;
   color: #1a2954;

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Blog</title>
+  <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/blog.css">
+</head>
+<body>
+   <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo" ><img src="../img/logo.jpg" width="80"></div>
+                <div class="brand-info">
+                    <h1>Cooktech</h1>
+                    <p1>CÔNG NGHỆ DẪN LỐI</p1>
+                    <br>
+                    <p2><tab>Nâng tầm phong cách nấu ăn</tab></p2>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" >Trang chủ</a></li>
+                    <li><a  href="../products.html" >Sản phẩm</a></li>
+                    <li><a href="../about.html">Về chúng tôi</a></li>
+                    <li><a href="../blog.html" >Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="login-btn" onclick="openModal()">Đăng nhập</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Giỏ hàng
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="blog-detail">
+            
+
+            <h1>Gen Z và trào lưu “Cooking Flow”: Nấu ăn không chỉ là nghĩa vụ mà là cảm hứng liền mạch</h1>
+            <img src="../img/blog5-1.png" alt="Người đang nấu ăn trong bếp" class="header-image">
+            <p> 
+            Đối với Gen Z, nấu ăn ngày nay không chỉ đơn thuần là chuẩn bị một bữa ăn. Đó còn là cách để thể hiện cá tính, giải tỏa căng thẳng và tận hưởng những khoảnh khắc sáng tạo. Một khảo sát mới đây cho thấy, <b>65% bạn trẻ Việt nấu ăn ít nhất 3 lần/tuần</b>, nhưng đa phần vẫn mong muốn có thêm công cụ để giúp trải nghiệm bếp núc trở nên tiện lợi và “mượt mà” hơn.
+            </p>
+
+            <h2>Khi “flow” bị đứt giữa gian bếp</h2>
+            <img src="../img/blog5-2.png" alt="Người đang nấu ăn trong bếp" class="header-image">
+            <p>
+            Dù đam mê nấu nướng, nhiều bạn trẻ vẫn thường xuyên gặp tình huống mất hứng: đang sơ chế thì thiếu nguyên liệu, đang nấu thì quên bước, hoặc phải liên tục cầm điện thoại để tra cứu công thức. Những gián đoạn này khiến quá trình nấu ăn trở nên ngắt quãng, mất đi sự hào hứng ban đầu.
+            </p>
+            <p>
+                Chính vì vậy, một trào lưu mới mang tên “<b>Cooking Flow</b>” đang lan tỏa trong cộng đồng yêu bếp. Đây là cách nhìn nhận nấu ăn như một hành trình liền mạch, nơi mọi bước đều nối tiếp nhau một cách tự nhiên – giống như chơi nhạc hay vẽ tranh. Với Cooking Flow, căn bếp không chỉ là nơi “nấu cho xong”, mà trở thành không gian sáng tạo, truyền cảm hứng và giữ nhịp năng lượng tích cực.
+            </p>
+    
+            <h2>
+                Công nghệ giúp giữ trọn cảm hứng
+            </h2>
+            <img src="../img/blog5-3.png" alt="Người đang nấu ăn trong bếp" class="header-image">
+            <p>
+                Để bắt kịp xu hướng này, nhiều thương hiệu đã nhanh chóng giới thiệu những giải pháp hỗ trợ trải nghiệm nấu ăn. Trong đó, <b>Cookmate AR</b> gây chú ý khi kết hợp công nghệ thực tế tăng cường (AR) vào một chiếc tạp dề thông minh.
+            </p>
+            <p>
+                Chỉ cần mặc Cookmate AR, người dùng có thể nhìn thấy <b>công thức nổi ngay trong không gian bếp</b>, được hướng dẫn trực quan bằng hình ảnh và video AR. Sản phẩm còn cho phép <b>điều khiển bằng giọng nói</b> để rảnh tay thao tác, đồng thời <b>gợi ý món ăn dựa trên nguyên liệu sẵn có</b>. Nhờ đó, quá trình nấu ăn trở nên mượt mà từ đầu đến cuối, không còn gián đoạn bởi việc quên bước hay phải liên tục tra cứu.
+            </p>
+
+            <h2>
+                Nấu ăn – từ nghĩa vụ thành phong cách sống
+            </h2>
+            <p>
+                Đại diện Cookmate chia sẻ:
+            <br>“Chúng tôi nhận thấy Gen Z có nhu cầu rất lớn trong việc biến bếp núc thành không gian sáng tạo. Cookmate AR chính là người bạn đồng hành, giúp các bạn giữ trọn cảm hứng trong từng bữa ăn.”
+            </p>
+            <p>
+                Có thể thấy, với Gen Z, nấu ăn đang vượt ra khỏi khuôn khổ của một nghĩa vụ hàng ngày. Khi được hỗ trợ bởi công nghệ và cảm hứng sáng tạo, mỗi bữa ăn trở thành một “tác phẩm” và mỗi căn bếp trở thành một “sân khấu nhỏ”. Trào lưu <b>Cooking Flow</b> không chỉ phản ánh phong cách sống mới của giới trẻ, mà còn mở ra hướng đi cho những công nghệ gắn liền với đời sống hàng ngày.
+            </p>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="blog-actions">
+            <a href="../blog.html" class="back-button">← Quay lại</a>
+            <a href="#" class="share-button">📤 Chia sẻ bài viết</a>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+ <!-- Footer sẽ được load ở đây -->
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch("../footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        })
+        .catch(err => console.error("Không thể tải footer:", err));
+</script>
+
+
+</body>
+</html>
