@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Blog</title>
+  <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/blog.css">
+</head>
+<body>
+   <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo" ><img src="../img/logo.jpg" width="80"></div>
+                <div class="brand-info">
+                    <h1>Cooktech</h1>
+                    <p1>CÔNG NGHỆ DẪN LỐI</p1>
+                    <br>
+                    <p2><tab>Nâng tầm phong cách nấu ăn</tab></p2>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" >Trang chủ</a></li>
+                    <li><a  href="../products.html" >Sản phẩm</a></li>
+                    <li><a href="../about.html">Về chúng tôi</a></li>
+                    <li><a href="../blog.html" >Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="login-btn" onclick="openModal()">Đăng nhập</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Giỏ hàng
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="blog-detail">
+            
+
+            <h1>Không còn lo lắng khi nấu ăn – CookMate AR luôn bên cạnh bạn</h1>
+            <img src="../img/blog6.png" alt="Người đang nấu ăn trong bếp" class="header-image">
+
+            <h2>Khi nấu ăn trở thành áp lực</h2>
+            <p>
+                Ai trong chúng ta cũng từng trải qua những “tai nạn bếp núc”: món ăn bị cháy khét chỉ vì quên đảo, nêm nếm sai công thức khiến cả nồi canh mất vị, hay nguyên liệu mua về rồi bỏ phí vì không biết sử dụng thế nào cho hợp lý. Những điều tưởng nhỏ này lại khiến việc nấu ăn trở thành gánh nặng, làm nhiều người ngần ngại bước vào bếp.
+            </p>
+        
+            <h2>
+                CookMate AR – Người bạn đồng hành thông minh
+            </h2>
+            <p>
+                CookMate AR được thiết kế để biến căn bếp từ nơi áp lực thành nơi đầy cảm hứng. Với tính năng hướng dẫn nấu ăn AR, tạp dề thông minh sẽ hiển thị trực quan từng bước chế biến ngay trước mắt bạn. Không cần phải ghi nhớ hay lo bỏ sót – mọi công đoạn đều rõ ràng, dễ hiểu.
+            </p>
+            <p>
+                Đặc biệt, CookMate AR còn theo dõi và nhắc nhở theo thời gian thực: từ việc điều chỉnh lửa, canh thời gian đảo nguyên liệu, đến lượng gia vị vừa đủ. Bạn sẽ luôn cảm giác như có một trợ lý riêng trong gian bếp, giúp từng món ăn trở nên chuẩn vị và tiết kiệm nguyên liệu.
+            </p>
+            <p>
+                Với sự đồng hành của CookMate trợ lý, nấu ăn không còn là thử thách mà là cơ hội trải nghiệm công nghệ, sáng tạo món ngon và tận hưởng niềm vui bữa cơm gia đình.
+            </p>
+
+            
+            <h2>
+                Bếp là nơi bình yên, không phải áp lực
+            </h2>
+            <p>
+             Từ nay, bạn có thể tự tin bước vào bếp mà không còn lo cháy đồ, sai công thức hay lãng phí thực phẩm. CookMate AR sẽ luôn ở cạnh, mang đến cảm giác an tâm và biến mỗi bữa cơm trở thành khoảnh khắc hạnh phúc.
+            </p>
+            <p>
+            Hãy để bếp thông minh CookMate AR trở thành người bạn đồng hành đáng tin cậy của bạn, để việc nấu ăn luôn là trải nghiệm dễ dàng và trọn vẹn.
+            </p>
+            <p>
+                 #CookMateAR #CookingMadeEasy #NoMoreKitchenStress #TapDeThongMinh
+            </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="blog-actions">
+            <a href="../blog.html" class="back-button">← Quay lại</a>
+            <a href="#" class="share-button">📤 Chia sẻ bài viết</a>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+ <!-- Footer sẽ được load ở đây -->
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch("../footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        })
+        .catch(err => console.error("Không thể tải footer:", err));
+</script>
+
+
+</body>
+</html>

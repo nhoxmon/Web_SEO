@@ -116,13 +116,14 @@ nav a {
   flex: 1;
 }
 
-.blog-text h2 {
+.blog-text h2,h3 {
   margin-top: 0;
   color: #1a2954;
 }
 
 .blog-text p {
   color: #444;
+  margin-top: 5px;
   margin-bottom: 10px;
 }
 
