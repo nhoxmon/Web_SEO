@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Blog</title>
+  <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/blog.css">
+</head>
+<body>
+   <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo" ><img src="../img/logo.jpg" width="80"></div>
+                <div class="brand-info">
+                    <h1>Cooktech</h1>
+                    <p1>CÔNG NGHỆ DẪN LỐI</p1>
+                    <br>
+                    <p2><tab>Nâng tầm phong cách nấu ăn</tab></p2>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" >Trang chủ</a></li>
+                    <li><a  href="../products.html" >Sản phẩm</a></li>
+                    <li><a href="../about.html">Về chúng tôi</a></li>
+                    <li><a href="../blog.html" >Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="login-btn" onclick="openModal()">Đăng nhập</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Giỏ hàng
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="blog-detail">
+            
+            <img src="../img/blog7.png" alt="Người đang nấu ăn trong bếp" class="header-image">
+            <h1>Bí quyết giữ “flow” trong căn bếp – Chia sẻ từ đầu bếp Nguyễn Minh Khôi</h1>
+            <p>
+                Trong thế giới ẩm thực, ai cũng nói đến kỹ thuật, nguyên liệu, hay công thức. Nhưng với đầu bếp Nguyễn Minh Khôi – người có hơn 15 năm kinh nghiệm tại nhiều nhà hàng 5 sao – điều quan trọng nhất lại nằm ở một yếu tố tưởng chừng đơn giản: <b>giữ được sự mượt mà và cảm hứng liền mạch trong quá trình nấu ăn</b>.
+            </p>
+            <p>
+                Anh Khôi chia sẻ:
+            <ul><em>
+                “Một bữa ăn ngon không chỉ nằm ở hương vị, mà còn đến từ cách người nấu duy trì cảm hứng. Khi bạn không bị gián đoạn, món ăn sẽ mang năng lượng tích cực hơn rất nhiều.”
+            </em></ul>
+            </p>
+
+            <h2>1. Chuẩn bị kỹ càng – bước khởi đầu cho sự liền mạch</h2>
+            <p>
+                Theo đầu bếp Khôi, 70% thành công của món ăn nằm ở giai đoạn chuẩn bị. Việc sơ chế, cân đo gia vị, và sắp xếp dụng cụ gọn gàng sẽ giúp bạn không phải ngừng lại giữa chừng.
+            <ul><em>
+                “Ngày trước, tôi thường phải lật sách hay mở điện thoại để xem công thức, đôi khi làm gián đoạn cả quá trình. Giờ đây, với chiếc tạp dề thông minh <b>Cookmate</b>, công thức được hiển thị trực tiếp qua màn hình AR. 
+                Tôi vừa nấu, vừa theo dõi từng bước mà không cần rời bếp. Flow của tôi luôn được giữ nguyên.”
+            </em></ul>
+            </p>
+            
+            <h2>2. Biến căn bếp thành sân khấu sáng tạo</h2>
+            <p>
+                Với anh Khôi, căn bếp chẳng khác nào một sân khấu. Tiếng dao thớt, tiếng dầu sôi, mùi thơm lan tỏa – tất cả tạo nên một “bản nhạc” mà người nấu chính là nhạc trưởng.
+            <ul><em>
+                “Khi nấu ăn, tôi thường muốn biến tấu ngay tại chỗ. Ví dụ, đang làm gà xào thì nảy ra ý tưởng thêm một loại gia vị mới. 
+                Nhờ <b>Cookmate</b>, tôi có thể tìm ngay gợi ý biến tấu mà không phải dừng lại tra cứu. Nhịp điệu trong bếp cứ thế liền mạch.”
+            </em></ul>
+            </p>
+
+            <h2>3. Sáng tạo nhưng không bị gián đoạn</h2>
+            <p>
+                Một lỗi phổ biến khi nấu ăn là dừng lại giữa chừng: tìm công thức mới, thiếu nguyên liệu, hoặc đổi ý. Điều đó khiến cảm hứng nhanh chóng bị cắt ngang.
+            <ul><em>
+                “Điều tôi đánh giá cao ở <b>Cookmate</b> là khả năng gợi ý thay thế nguyên liệu ngay lập tức. Thiếu chanh? Bạn có thể dùng giấm táo. 
+                Thiếu đường nâu? Hãy thử mật ong. Mọi thứ đều được hiển thị trực quan mà không làm gián đoạn quá trình nấu.”
+            </em></ul>
+            </p>
+
+            <h2>4. Giữ trọn cảm xúc – gia vị đặc biệt nhất</h2>
+            <p>
+                Với đầu bếp Khôi, nấu ăn không chỉ là chuyện dinh dưỡng, mà còn là cách gửi gắm tình cảm. Một món ăn được thực hiện trong sự mượt mà, trọn vẹn flow sẽ mang đến năng lượng tích cực cho cả gia đình.
+            <ul><em>
+                “Công nghệ như Cookmate không thay thế người nấu, mà đồng hành cùng họ. Nó giúp bạn giữ cảm xúc nguyên vẹn từ lúc bắt đầu đến khi hoàn thiện món ăn.”
+            </em></ul>
+            </p>
+
+            <p>
+                Đầu bếp Nguyễn Minh Khôi kết luận:
+            <ul><em>
+                “Khi bạn <b>Cook Without Pause</b>, bạn không chỉ tạo ra món ăn, mà còn tạo ra kỷ niệm. Đó là giá trị lớn nhất của nấu ăn.”
+            </em></ul>
+            </p>
+
+            <p>
+                Cookmate tin rằng mỗi căn bếp đều có thể trở thành không gian sáng tạo, nơi cảm hứng luôn đầy ắp và niềm vui luôn hiện diện.
+            </p>
+            <p>
+                👉 Hãy để Cookmate đồng hành cùng bạn để mỗi bữa ăn trở thành một trải nghiệm mượt mà và trọn vẹn.
+            </p>
+
+
+
+
+
+
+
+            <div class="blog-actions">
+            <a href="../blog.html" class="back-button">← Quay lại</a>
+            <a href="#" class="share-button">📤 Chia sẻ bài viết</a>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+ <!-- Footer sẽ được load ở đây -->
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch("../footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        })
+        .catch(err => console.error("Không thể tải footer:", err));
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Blog</title>
+  <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/blog.css">
+     <style>
+    b.orange {
+      color: rgb(255, 145, 0);
+    }
+  </style>
+</head>
+<body>
+   <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo" ><img src="../img/logo.jpg" width="80"></div>
+                <div class="brand-info">
+                    <h1>Cooktech</h1>
+                    <p1>CÔNG NGHỆ DẪN LỐI</p1>
+                    <br>
+                    <p2><tab>Nâng tầm phong cách nấu ăn</tab></p2>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" >Trang chủ</a></li>
+                    <li><a  href="../products.html" >Sản phẩm</a></li>
+                    <li><a href="../about.html">Về chúng tôi</a></li>
+                    <li><a href="../blog.html" >Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="login-btn" onclick="openModal()">Đăng nhập</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Giỏ hàng
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="blog-detail">
+            
+
+            <h1>CookMate AR – Công nghệ thay đổi thói quen nấu ăn</h1>
+            
+            <p>
+                Trong thời đại công nghệ, cách chúng ta làm việc, học tập và giải trí đã thay đổi hoàn toàn. 
+                Và nay, <b>CookMate AR tiên phong đưa công nghệ AR vào nhà bếp</b>, mở ra một trải nghiệm nấu ăn hoàn toàn mới.
+            </p>
+            <h2>Không chỉ là công cụ – CookMate AR là phong cách sống</h2>
+            <p>
+                CookMate AR được thiết kế để đồng hành cùng bạn trong từng khoảnh khắc nấu ăn. Với màn hình AR tích hợp ngay trên tạp dề, người dùng có thể:
+                <ul>
+                <li>Xem công thức ngay trước mắt.</li>
+                <li>Hỏi – đáp 1:1 tức thì.</li>
+                <li>Giữ trọn mạch nấu ăn, không gián đoạn.</li>
+                </ul>
+                <br>
+                Không dừng lại ở việc hỗ trợ nấu ăn, CookMate AR còn góp phần khơi gợi tình yêu bếp núc, giúp thế hệ trẻ thêm gắn kết với gia đình và hướng đến một lối sống lành mạnh hơn.
+
+            </p>
+            <img src="" alt="Người đang nấu ăn trong bếp" class="header-image">
+            <h2>
+                Một cuộc cách mạng trong căn bếp hiện đại
+            </h2>
+            <p>
+                CookMate AR không chỉ mang đến sự tiện lợi – mà còn tái định nghĩa nấu ăn như một phần của lifestyle công nghệ. 
+                Đây là sự giao thoa giữa <b>công nghệ AR nhà bếp tiên phong</b> và niềm vui sáng tạo, đánh dấu một bước ngoặt trong hành trình thay đổi thói quen nấu ăn.
+            </p>
+            <p>
+                <b>👉 CookMate AR – Khởi đầu cho cuộc cách mạng trong căn bếp của bạn.</b>
+            </p>
+            <p>
+                #CookMateAR #KitchenRevolution #TapDeThongMinh
+            </p>
+
+
+
+
+            <div class="blog-actions">
+            <a href="../blog.html" class="back-button">← Quay lại</a>
+            <a href="#" class="share-button">📤 Chia sẻ bài viết</a>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+ <!-- Footer sẽ được load ở đây -->
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch("../footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        })
+        .catch(err => console.error("Không thể tải footer:", err));
+</script>
+
+
+</body>
+</html>

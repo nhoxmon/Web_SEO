@@ -152,6 +152,10 @@ nav a {
   margin-bottom: 1rem;
 }
 
+.blog-detail ul{
+  padding-left: 50px;
+  padding-right: 50px;
+}
 
 h1 {
   font-size: 2em;
