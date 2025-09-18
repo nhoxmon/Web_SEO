@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Blog</title>
+  <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/blog.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+     <style>
+    b.orange {
+      color: rgb(255, 145, 0);
+    }
+  </style>
+</head>
+<body>
+   <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo" ><img src="../img/logo.jpg" width="80"></div>
+                <div class="brand-info">
+                    <h1>Cooktech</h1>
+                    <p1>CÔNG NGHỆ DẪN LỐI</p1>
+                    <br>
+                    <p2><tab>Nâng tầm phong cách nấu ăn</tab></p2>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" >Trang chủ</a></li>
+                    <li><a  href="../products.html" >Sản phẩm</a></li>
+                    <li><a href="../about.html">Về chúng tôi</a></li>
+                    <li><a href="../blog.html" >Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="login-btn" onclick="openModal()">Đăng nhập</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Giỏ hàng
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="blog-detail">
+            <img src="../img/Blog9.png" alt="Người đang nấu ăn trong bếp" class="header-image">
+
+            <h1>Từ trend TikTok đến căn bếp của bạn – CookMate AR dẫn đầu xu hướng ✨</h1>
+            
+            <p>
+                TikTok, IG Reels ngày càng ngập tràn những trend nấu ăn lạ lẫm: từ trà chanh giã tay, lạp xưởng nướng đá cho đến gà ủ muối hoa tiêu. 
+                Bạn “thả tim” hàng trăm video nhưng vẫn chưa dám thử vì… sợ nấu fail?
+            </p>
+            <p>
+                👉 Đừng chỉ xem trend – hãy bắt trend ngay trong căn bếp của bạn với CookMate AR TikTok.
+            </p>
+
+            <h2>CookMate AR – Bắt trend nấu ăn dễ như chơi 🎬🍳</h2>
+            <p>
+                CookMate AR sử dụng công nghệ AR thông minh, hiển thị trực tiếp công thức trend nấu ăn TikTok ngay trước mắt.
+                <ul>-   Không cần lướt điện thoại vừa nấu vừa run tay.</ul>
+                <ul>-   Không sợ bỏ lỡ bước nào, vì AR sẽ hướng dẫn từng chi tiết.</ul>
+                <ul>-   Từ công thức viral trên TikTok/IG đến những mẹo “hack” nấu ăn – tất cả đều nằm trong tầm mắt bạn.</ul>
+                <br>
+                Nói cách khác: bạn không chỉ bắt kịp trend mà còn dẫn đầu xu hướng nấu ăn AR.
+            </p>
+
+            <h2>
+                Không chỉ xem trend – mà còn tạo trend 💥
+            </h2>
+            <p>
+                CookMate AR không biến bạn thành “viewer thụ động”, mà trao cho bạn cơ hội tự tin nấu, quay, chia sẻ trend mới.
+                    <ul>-   Sinh viên, dân văn phòng → ai cũng có thể biến căn bếp thành studio TikTok.</ul>
+                    <ul>-   Bạn không chỉ theo trend, mà còn trở thành người tạo trend nấu ăn mới.</ul>
+                <br>
+                 CookMate AR – Nếu không dùng, bạn sẽ bị bỏ lại phía sau.
+            </p>
+            <p>
+                 Trend nấu ăn AR không còn là tương lai – nó đang diễn ra ngay bây giờ. Và bạn sẽ là một phần trong đó.
+            </p>
+            <p>
+                #CookMateAR #TikTokKitchen #CookingTrend #BepCongNghe
+            </p>
+
+
+
+
+            <div class="blog-actions">
+            <a href="../blog.html" class="back-button">← Quay lại</a>
+            <a href="#" class="share-button">📤 Chia sẻ bài viết</a>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+ <!-- Footer sẽ được load ở đây -->
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch("../footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        })
+        .catch(err => console.error("Không thể tải footer:", err));
+</script>
+
+
+</body>
+</html>
