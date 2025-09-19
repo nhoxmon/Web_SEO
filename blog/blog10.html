@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Blog</title>
+  <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/blog.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+     <style>
+    b.orange {
+      color: rgb(255, 145, 0);
+    }
+  </style>
+</head>
+<body>
+   <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo" ><img src="../img/logo.jpg" width="80"></div>
+                <div class="brand-info">
+                    <h1>Cooktech</h1>
+                    <p1>CÔNG NGHỆ DẪN LỐI</p1>
+                    <br>
+                    <p2><tab>Nâng tầm phong cách nấu ăn</tab></p2>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" >Trang chủ</a></li>
+                    <li><a  href="../products.html" >Sản phẩm</a></li>
+                    <li><a href="../about.html">Về chúng tôi</a></li>
+                    <li><a href="../blog.html" >Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="login-btn" onclick="openModal()">Đăng nhập</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Giỏ hàng
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="blog-detail">
+            <img src="../img/blog10.png" alt="Người đang nấu ăn trong bếp" class="header-image">
+            
+            <p>
+                Ba tuần kể từ khi CookMate AR chính thức ra mắt, sản phẩm đã nhẹ nhàng bước vào hàng ngàn căn bếp — không ồn ã, nhưng đủ để khiến chúng tôi dừng lại và lắng nghe. 
+                Những bức ảnh gia đình nhoẻn miệng, clip người trẻ khoe “món đầu tay”, lời nhắn cảm ơn của phụ huynh xa nhà… 
+                Tất cả tạo nên một cảm xúc chung: bếp bỗng ấm hơn, nấu ăn bớt áp lực, niềm vui được trả về từng bữa ăn.
+            </p>
+      
+            <h2>Trải nghiệm thực tế từ người dùng</h2>
+            <p>
+                Những câu chuyện chân thật chính là minh chứng rõ ràng nhất:
+                <ul>“Mình không còn sợ nấu sai nữa. CookMate nhắc mình từng bước, nấu xong mà vẫn rảnh tay dọn bếp.” — An Nhiên, 26 tuổi</ul>
+                <br>
+                <ul>“Là PT, mình cần bữa ăn đúng khẩu phần. CookMate giúp mình cân bằng dinh dưỡng và tiết kiệm thời gian.” — Trung, huấn luyện viên</ul>
+                <br>
+                <ul>“Mẹ mình dùng rất nhanh; mẹ thích vì nhìn to, dễ hiểu. Từ ngày có CookMate, mẹ hay gọi video khoe món ăn hơn.” — Vy, sinh viên xa nhà</ul>
+                <br>
+                👉 Những trải nghiệm ấy cho thấy CookMate AR giải quyết đúng nỗi đau: nấu ăn không còn áp lực, mà trở thành niềm vui và sự kết nối.
+            </p>
+
+            <h2>
+                Vì sao CookMate AR là xu hướng bền vững?
+            </h2>
+            <p>
+                    <ul>Hướng dẫn AR trực quan: Hiểu ngay, làm đúng, hạn chế lãng phí.</ul>
+                    <br>
+                    <ul>Voice guide thông minh: Tay bận vẫn nấu được, không lo cháy khét.</ul>
+                    <br>
+                    <ul>Cá nhân hóa công thức: Ăn kiêng, eat clean, chay, tăng cơ… đều phù hợp.</ul>
+                    <br>
+                    <ul>Tích hợp chia sẻ cộng đồng: Lưu công thức, remix, khoe thành phẩm.</ul>
+                    <br>
+                    <ul>Thiết kế tinh tế: Tạp dề đơn sắc, tối giản, vừa hữu dụng vừa thời trang.</ul>
+            </p>
+            <p>
+                 CookMate AR không chỉ là “app dạy nấu ăn”. Đó là một trải nghiệm công nghệ định hình thói quen mới trong căn bếp hiện đại.
+            </p>
+           
+            
+            <h2>
+                Những tín hiệu từ cộng đồng
+            </h2>
+            <p>
+                    <ul>Người dùng đăng clip “trước – sau” khi dùng CookMate AR.</ul>
+                    <br>
+                    <ul>Các mâm cơm #CookMate xuất hiện ngày càng nhiều trên mạng xã hội.</ul>
+                    <br>
+                    <ul>Từ phụ huynh, sinh viên đến creator, tất cả đều gọi tên CookMate khi nói về “giải pháp giúp tôi vào bếp dễ dàng”.</ul>
+            </p>
+            <p>
+                💡 Đây là bằng chứng CookMate AR đang trở thành <b>thói quen bếp núc thông minh</b>.
+            </p>
+            <p>
+                Chặng đường ba tuần vừa qua chỉ là khởi đầu. CookMate AR đã làm được điều mà chúng tôi mong muốn nhất: biến việc nấu ăn từ gánh nặng thành trải nghiệm truyền cảm hứng cho từng gia đình, từng bạn trẻ, từng người xa nhà.
+            </p>
+            <p>
+                Hãy để CookMate AR tiếp tục đồng hành cùng bạn trong hành trình nấu ăn thông minh.
+            </p>
+            <p>
+                Khám phá thêm công thức, trải nghiệm demo AR và đặt mua thử tại website chính thức để bắt đầu hành trình của riêng bạn.
+            </p>
+            <p>
+                #CookMateAR #CookTechVietNam #NauAnThongMinh #TapDeThongMinh
+            </p>
+
+
+
+            <div class="blog-actions">
+            <a href="../blog.html" class="back-button">← Quay lại</a>
+            <a href="#" class="share-button">📤 Chia sẻ bài viết</a>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+ <!-- Footer sẽ được load ở đây -->
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch("../footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        })
+        .catch(err => console.error("Không thể tải footer:", err));
+</script>
+
+
+</body>
+</html>

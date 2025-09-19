@@ -121,7 +121,7 @@ nav a {
   color: #1a2954;
 }
 
-.blog-text p {
+.blog-text p,ul {
   color: #444;
   margin-top: 5px;
   margin-bottom: 10px;
